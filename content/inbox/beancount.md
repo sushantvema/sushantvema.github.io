@@ -79,4 +79,5 @@ Every couple of weeks spend 1-2 hours to update this input file. Only for most u
 
 You obtain a full history, a complete timeline of all of the financial transactions from all the accounts over time, often connected together, in a single text file.
 
+# Getting Started with Beancount
 
