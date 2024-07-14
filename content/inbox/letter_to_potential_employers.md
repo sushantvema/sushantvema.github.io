@@ -1,7 +1,7 @@
 ---
 title: "A Letter to my Potential Employers"
 date_created: "2024-07-13T22:08:10"
-date: "2024-07-13T22:08:17"
+date: "2024-07-13T23:06:57"
 tags:
   - "evergreen"
 publish: true
@@ -21,7 +21,7 @@ My name is Sushant Harischandra Vema. Since June 2024, I have been working at In
     - Collecting and sythesizing best practices for design of semantic search systems in Confluence.
     - Cluster configuration templates for various ML tasks.
 
-I am directly managed by the wonderful [Cyrus Mohammadian](https://www.linkedin.com/in/cmohamma/), the Chief Data Scientist in the organization. Additionally, I work alongside one senior data analyst [Ryan Uhlmeyer](https://www.linkedin.com/in/ryan-uhlmeyer-4338b9123/), one senior software architect [Sagar Jadhav](https://www.linkedin.com/in/sagarjadhav/), and one senior data engineer [Alex Begg](https://www.linkedin.com/in/alexbegg/). Under the guidance of [Anj Yamsani](https://www.linkedin.com/in/anjyamsani/), our lean team is tasked with engineering mission-critical AI capabilities for our platform. I am grateful for the mhttps://www.linkedin.com/in/anjyamsani/entorship of each and every one of these brilliant people. 
+I am directly managed by the wonderful [Cyrus Mohammadian](https://www.linkedin.com/in/cmohamma/), the Chief Data Scientist in the organization. Additionally, I work alongside one senior data analyst [Ryan Uhlmeyer](https://www.linkedin.com/in/ryan-uhlmeyer-4338b9123/), one senior software architect [Sagar Jadhav](https://www.linkedin.com/in/sagarjadhav/), and one senior data engineer [Alex Begg](https://www.linkedin.com/in/alexbegg/). Under the guidance of [Anj Yamsani](https://www.linkedin.com/in/anjyamsani/), our lean team is tasked with engineering mission-critical AI capabilities for our platform. I am grateful for the mentorship of each and every one of these brilliant people. 
 
 Besides my technical skills, I am a detail-oriented team player who takes great care in producting documentation resources to power innovation in the future. I am also currently writing this website as a platform for sharing technical knowledge in the fields of Generative AI, data science, computing, and more. 
 
