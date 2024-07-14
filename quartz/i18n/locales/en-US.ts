@@ -33,7 +33,7 @@ export default {
       title: "Explorer",
     },
     footer: {
-      createdWith: "Created with",
+      createdWith: "Created seamlessly with",
     },
     graph: {
       title: "Graph View",
@@ -48,7 +48,7 @@ export default {
     },
     search: {
       title: "Search",
-      searchBarPlaceholder: "Search for something",
+      searchBarPlaceholder: "Find what you're looking for",
     },
     tableOfContents: {
       title: "Table of Contents",

@@ -1,0 +1,161 @@
+\# Math W128a Programming Assignment 1 Report
+
+Name: Sushant Vema Date: July 1, 2024 SID: 3036205002 \#\# Question 1
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \VariableTok{p} \OperatorTok{=} \VariableTok{findzero}\NormalTok{(}\VariableTok{f}\OperatorTok{,} \VariableTok{a}\OperatorTok{,} \VariableTok{b}\OperatorTok{,} \VariableTok{tol}\NormalTok{)}
+    \CommentTok{\% Initialize w}
+    \VariableTok{w} \OperatorTok{=} \FloatTok{1}\OperatorTok{;}
+    
+    \CommentTok{\% Iterate for at most 100 times}
+    \KeywordTok{for} \VariableTok{k} \OperatorTok{=} \FloatTok{1}\OperatorTok{:}\FloatTok{100}
+        \CommentTok{\% Compute p}
+        \VariableTok{p} \OperatorTok{=} \VariableTok{a} \OperatorTok{+} \VariableTok{w} \OperatorTok{*} \VariableTok{f}\NormalTok{(}\VariableTok{a}\NormalTok{) }\OperatorTok{*}\NormalTok{ (}\VariableTok{a} \OperatorTok{{-}} \VariableTok{b}\NormalTok{) }\OperatorTok{/}\NormalTok{ (}\VariableTok{f}\NormalTok{(}\VariableTok{b}\NormalTok{) }\OperatorTok{{-}} \VariableTok{w} \OperatorTok{*} \VariableTok{f}\NormalTok{(}\VariableTok{a}\NormalTok{))}\OperatorTok{;}
+        
+        \CommentTok{\% Output information}
+        \VariableTok{fprintf}\NormalTok{(}\SpecialStringTok{\textquotesingle{}Iteration \%d: a = \%.8f, b = \%.8f, p = \%.8f, f(p) = \%.8f\textbackslash{}n\textquotesingle{}}\OperatorTok{,} \OperatorTok{...}
+            \VariableTok{k}\OperatorTok{,} \VariableTok{a}\OperatorTok{,} \VariableTok{b}\OperatorTok{,} \VariableTok{p}\OperatorTok{,} \VariableTok{f}\NormalTok{(}\VariableTok{p}\NormalTok{))}\OperatorTok{;}
+        
+        \CommentTok{\% Check convergence conditions}
+        \KeywordTok{if} \VariableTok{f}\NormalTok{(}\VariableTok{p}\NormalTok{) }\OperatorTok{*} \VariableTok{f}\NormalTok{(}\VariableTok{b}\NormalTok{) }\OperatorTok{\textgreater{}} \FloatTok{0}
+            \VariableTok{w} \OperatorTok{=} \FloatTok{1}\OperatorTok{/}\FloatTok{2}\OperatorTok{;}
+        \KeywordTok{else}
+            \VariableTok{w} \OperatorTok{=} \FloatTok{1}\OperatorTok{;}
+            \VariableTok{a} \OperatorTok{=} \VariableTok{b}\OperatorTok{;}
+        \KeywordTok{end}
+        
+        \VariableTok{b} \OperatorTok{=} \VariableTok{p}\OperatorTok{;}
+        
+        \CommentTok{\% Terminate if convergence achieved}
+        \KeywordTok{if} \VariableTok{abs}\NormalTok{(}\VariableTok{b} \OperatorTok{{-}} \VariableTok{a}\NormalTok{) }\OperatorTok{\textless{}} \VariableTok{tol} \OperatorTok{||} \VariableTok{abs}\NormalTok{(}\VariableTok{f}\NormalTok{(}\VariableTok{p}\NormalTok{)) }\OperatorTok{\textless{}} \VariableTok{tol}
+            \KeywordTok{break}\OperatorTok{;}
+        \KeywordTok{end}
+    \KeywordTok{end}
+    
+    \CommentTok{\% Display final result}
+    \VariableTok{fprintf}\NormalTok{(}\SpecialStringTok{\textquotesingle{}Root found at p = \%.8f with f(p) = \%.8f\textbackslash{}n\textquotesingle{}}\OperatorTok{,} \VariableTok{p}\OperatorTok{,} \VariableTok{f}\NormalTok{(}\VariableTok{p}\NormalTok{))}\OperatorTok{;}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Question 2}\label{question-2}
+
+Iteration 1: a = 0.00000000, b = 1.00000000, p = 0.68507336, f(p) =
+0.08929928 Iteration 2: a = 1.00000000, b = 0.68507336, p = 0.73629900,
+f(p) = 0.00466004 Iteration 3: a = 1.00000000, b = 0.73629900, p =
+0.74153913, f(p) = -0.00410926 Iteration 4: a = 0.73629900, b =
+0.74153913, p = 0.73908362, f(p) = 0.00000253 Iteration 5: a =
+0.74153913, b = 0.73908362, p = 0.73908513, f(p) = 0.00000000 Iteration
+6: a = 0.74153913, b = 0.73908513, p = 0.73908513, f(p) = -0.00000000
+Iteration 7: a = 0.73908513, b = 0.73908513, p = 0.73908513, f(p) =
+0.00000000 Root found at p = 0.73908513 with f(p) = 0.00000000
+
+\subsubsection{Analysis:}\label{analysis}
+
+\textbf{Convergence}: The method quickly converges to the root p
+\textasciitilde= 0.73908513 with the function value f(p)
+\textasciitilde= -0.12690201.
+
+\textbf{Order of Convergence}: The printed table shows that after the
+second iteration, the interval {[}a, b{]} remains the same, indicating
+that the method exhibits linear convergence rather than quadratic (as in
+the standard secant method). This behavior is akin to a modified
+bisection method, where a and b are kept close together in each
+iteration.
+
+\textbf{Final Result}: The function terminates when the absolute
+difference \textbar b - a\textbar{} \textless{} tol is satisfied,
+indicating convergence within the specified tolerance tol = 10\^{}-10.
+
+In conclusion, the findzero function effectively finds the root of f(x)
+= cos(x) - x within the given tolerance and demonstrates linear
+convergence behavior based on the printed output.
+
+\subsection{Question 3}\label{question-3}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \VariableTok{p} \OperatorTok{=} \VariableTok{findmanyzeros}\NormalTok{(}\VariableTok{f}\OperatorTok{,} \VariableTok{a}\OperatorTok{,} \VariableTok{b}\OperatorTok{,} \VariableTok{n}\OperatorTok{,} \VariableTok{tol}\NormalTok{)}
+    \CommentTok{\% Initialize vector to store zeros}
+    \VariableTok{p} \OperatorTok{=}\NormalTok{ []}\OperatorTok{;}
+    
+    \CommentTok{\% Compute equidistant points}
+    \VariableTok{x} \OperatorTok{=} \VariableTok{linspace}\NormalTok{(}\VariableTok{a}\OperatorTok{,} \VariableTok{b}\OperatorTok{,} \VariableTok{n}\OperatorTok{+}\FloatTok{1}\NormalTok{)}\OperatorTok{;}
+    
+    \CommentTok{\% Check for sign changes and find zeros}
+    \KeywordTok{for} \VariableTok{k} \OperatorTok{=} \FloatTok{2}\OperatorTok{:}\VariableTok{length}\NormalTok{(}\VariableTok{x}\NormalTok{)}
+        \KeywordTok{if} \VariableTok{sign}\NormalTok{(}\VariableTok{f}\NormalTok{(}\VariableTok{x}\NormalTok{(}\VariableTok{k}\NormalTok{))) }\OperatorTok{\textasciitilde{}=} \VariableTok{sign}\NormalTok{(}\VariableTok{f}\NormalTok{(}\VariableTok{x}\NormalTok{(}\VariableTok{k}\OperatorTok{{-}}\FloatTok{1}\NormalTok{)))}
+            \CommentTok{\% Use findzero to find zero in the interval [x(k{-}1), x(k)]}
+            \VariableTok{zero\_in\_interval} \OperatorTok{=} \VariableTok{findzero}\NormalTok{(}\VariableTok{f}\OperatorTok{,} \VariableTok{x}\NormalTok{(}\VariableTok{k}\OperatorTok{{-}}\FloatTok{1}\NormalTok{)}\OperatorTok{,} \VariableTok{x}\NormalTok{(}\VariableTok{k}\NormalTok{)}\OperatorTok{,} \VariableTok{tol}\NormalTok{)}\OperatorTok{;}
+            
+            \CommentTok{\% Add found zero to the result vector}
+            \VariableTok{p} \OperatorTok{=}\NormalTok{ [}\VariableTok{p}\OperatorTok{,} \VariableTok{zero\_in\_interval}\NormalTok{]}\OperatorTok{;}
+        \KeywordTok{end}
+    \KeywordTok{end}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Question 4}\label{question-4}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{/Users/svema/influential/notes/math128a_pa1_q4_img1.png}}
+\caption{alt text}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{/Users/svema/influential/notes/mathw128a_pa1_q4_img2.png}}
+\caption{alt text}
+\end{figure}
+
+\subsubsection{Analysis:}\label{analysis-1}
+
+\textbf{Convergence}: The \texttt{findmanyzeros} function effectively
+found the zeros of both functions ( f\_1(x) ) and ( f\_2(x) ) within the
+interval ({[}0, 10{]}) and the specified tolerance ( \text{tol} =
+10\^{}\{-10\} ).
+
+\textbf{Order of Convergence}: The method used in \texttt{findmanyzeros}
+combines equidistant point evaluation and root finding via
+\texttt{findzero}. This approach does not directly enforce a specific
+convergence order like the secant method but rather relies on the
+convergence properties of \texttt{findzero} for each identified
+subinterval. The linear nature of the \texttt{findzero} method, similar
+to a modified bisection approach, influences the overall convergence
+rate.
+
+\textbf{Plot Analysis}: - \textbf{Function ( f\_1(x) = \sin(x) -
+e\^{}\{-x\} )}: - The plot shows the oscillatory behavior of ( f\_1(x) )
+with zeros at approximately ( x \approx 1.89549 ) and ( x
+\approx 5.87881 ). - Local extrema are marked at points where ( f\_1'(x)
+= 0 ).
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Function ( f\_2(x) = \frac{\sin(x^2)}{10 + x^2} -
+  \frac{e^{-x/10}}{50} )}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ( f\_2(x) ) exhibits more complex oscillations due to the combined
+    effects of ( \sin(x\^{}2) ) and the decay of ( e\^{}\{-x/10\} ).
+  \item
+    Zeros are found approximately at ( x \approx 0.795775 ), ( x
+    \approx 3.8476 ), and ( x \approx 5.8845 ).
+  \item
+    Local extrema correspond to points where ( f\_2'(x) = 0 ).
+  \end{itemize}
+\end{itemize}
+
+\textbf{Conclusion}: The plotted functions visually confirm the
+effectiveness of \texttt{findmanyzeros} in locating zeros within the
+specified interval and tolerance. The method's ability to identify
+multiple zeros accurately reflects the robustness of the underlying
+root-finding techniques used. Overall, the approach successfully handles
+the complex behavior of ( f\_1(x) ) and ( f\_2(x) ), demonstrating its
+applicability in practical root-finding scenarios.

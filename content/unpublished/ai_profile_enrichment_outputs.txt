@@ -1,0 +1,319 @@
+## Outputs
+
+=============
+TIME START for gpt-3.5-turbo:  02/07/2024 17:51:42
+=============
+Number of tokens for top 100 of cippus_text input for 12841157: 11491
+############# Log: Biography Longform Report ###############
+{'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None}],
+ 'created': 1719942703,
+ 'id': 'chatcmpl-9gbxHZomfQhJmxID9Yu4FBJssTLeC',
+ 'model': 'gpt-3.5-turbo-0125',
+ 'object': 'chat.completion',
+ 'service_tier': None,
+ 'system_fingerprint': None,
+ 'usage': {'completion_tokens': 273,
+           'prompt_tokens': 11604,
+           'total_tokens': 11877}}
+Based on the provided social media posts, here is the requested information:
+
+1. **Age**: The user mentions they turned 33 on February 3rd, 2023. Consequently, as of 2023, the user is 33 years old.
+   
+2. **Marital Status**: The information provided does not explicitly mention the marital status of the user. No direct details are available to determine if the user is currently married.
+
+3. **Children**:
+   - The user has kids. Specifically, the user has a son named Charlie, who turned 9 on a specific birthday. The user also has a son named Jude. There are references to a baby girl and a daughter of the user referred to as Billie across several posts. Additionally, the user mentioned that Jude is excited to be a big brother.
+   
+4. **Location**: The user is originally from France but has been living in the USA for nearly a decade. There are references to living in cities like Austin, Texas, and Boston.
+
+5. **Occupation**: The user mentions being an author, as they talk about their second book being printed and released, and they express excitement about being a keynote speaker at an event related to autism and photography. Additionally, there are references to collaborating with brands for partnerships involving shapewear, baby carriers, and stem cell preservation guides.
+############# End Log ###############
+############# Log: Brand Affinity Longform Report ###############
+{'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None}],
+ 'created': 1719942708,
+ 'id': 'chatcmpl-9gbxM9jh6zPe12rChoYB0YaLRvzkQ',
+ 'model': 'gpt-3.5-turbo-0125',
+ 'object': 'chat.completion',
+ 'service_tier': None,
+ 'system_fingerprint': None,
+ 'usage': {'completion_tokens': 293,
+           'prompt_tokens': 11582,
+           'total_tokens': 11875}}
+Based on the concatenated string of text content from this user's account, we can gather some insights into their relationship with different brands:
+
+1. **Modern Burlap**: The user has mentioned this brand multiple times in relation to their children's milestones, celebrations, and products like milestone cards and bassinet photos.
+
+2. **Swanky Shank**: The user has referenced Tees from Swanky Shank in a patriotic context along with a flag emoji.
+
+3. **Zara Baby**: The user mentioned Zara Baby in the context of their baby's milestones and posted photos with relevant hashtags like #zarababy and #milestonescards.
+
+4. **Lillebaby**: The user expressed admiration for a carrier by Lillebaby, describing it as beautiful and comfortable.
+
+5. **Shapermint**: The user collaborated with Shapermint to share real motherhood moments and also provided a discount code for their followers.
+
+6. **Cord Blood Registry**: The user promoted awareness about cord blood storage with Cord Blood Registry and shared a link for a free guide.
+
+7. **At-A-Glance Planner**: The user mentioned using an At-A-Glance Planner for organization and trip planning.
+
+8. **WaterWipes**: The user collaborated with WaterWipes for a campaign about real parenthood moments.
+
+Overall, the user seems to engage with these brands in a positive and promotional manner, often sharing personal stories and experiences related to the products or services they offer.
+############# End Log ###############
+############# Log: Biography Json ###############
+{'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None}],
+ 'created': 1719942715,
+ 'id': 'chatcmpl-9gbxTTNP3d3Ul4cyb0X3Zqyfbn3K5',
+ 'model': 'gpt-3.5-turbo-0125',
+ 'object': 'chat.completion',
+ 'service_tier': None,
+ 'system_fingerprint': None,
+ 'usage': {'completion_tokens': 47,
+           'prompt_tokens': 11661,
+           'total_tokens': 11708}}
+```json
+{
+	"age": "33",
+	"marital status": "Separated",
+	"number of children": "3",
+	"location": "Austin, Texas",
+	"occupation": "Author"
+}
+```
+############# End Log ###############
+############# Log: Brand Affinity JSON ###############
+{'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None}],
+ 'created': 1719942716,
+ 'id': 'chatcmpl-9gbxULoDMWQoteGXRLuTNNzwciJ5p',
+ 'model': 'gpt-3.5-turbo-0125',
+ 'object': 'chat.completion',
+ 'service_tier': None,
+ 'system_fingerprint': None,
+ 'usage': {'completion_tokens': 226,
+           'prompt_tokens': 11649,
+           'total_tokens': 11875}}
+Based on the concatenated string of text content from this user's account, we can gather some insights into their relationship with different brands:
+
+1. **Modern Burlap**: The user has mentioned this brand multiple times in relation to their children's milestones, celebrations, and products like milestone cards and bassinet photos.
+
+2. **Swanky Shank**: The user has referenced Tees from Swanky Shank in a patriotic context along with a flag emoji.
+
+3. **Zara Baby**: The user mentioned Zara Baby in the context of their baby's milestones and posted photos with relevant hashtags like #zarababy and #milestonescards.
+
+4. **Lillebaby**: The user expressed admiration for a carrier by Lillebaby, describing it as beautiful and comfortable.
+
+5. **Shapermint**: The user collaborated with Shapermint to share real motherhood moments and also provided a discount code for their followers.
+
+6. **Cord Blood Registry**: The user promoted awareness about cord blood storage with Cord Blood Registry and shared a link for a free guide.
+
+7. **At-A-Glance Planner**: The user mentioned using an At-A-Glance Planner for organization and trip planning.
+
+8. **WaterWipes**: The user collaborated with WaterWipes for a campaign about real parenthood moments.
+
+Overall, the user seems to engage with these brands in a positive and promotional manner, often sharing personal stories and experiences related to the products or services they offer.
+############# End Log ###############
+=============
+TIME FINISH:  02/07/2024 17:52:01
+=============
+
+
+
+
+=============
+TIME START for gpt-4o:  02/07/2024 17:52:01
+=============
+############# Log: Biography Longform Report ###############
+{'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None}],
+ 'created': 1719942722,
+ 'id': 'chatcmpl-9gbxa2qlJb7PwlWdUmW0UkesOTgmt',
+ 'model': 'gpt-4o-2024-05-13',
+ 'object': 'chat.completion',
+ 'service_tier': None,
+ 'system_fingerprint': 'fp_d576307f90',
+ 'usage': {'completion_tokens': 496,
+           'prompt_tokens': 11276,
+           'total_tokens': 11772}}
+**User Analysis Report**
+
+**Age:**
+- The user posted about their 30th birthday, saying, "This is 30! THIRTY!" Moreover, another post marking their birthday mentioned, “33 on Feb 3rd, 2023.” Thus, the user is currently **33 years old**.
+
+**Marital Status:**
+- The user mentioned, "Willy and I are still separated but this baby is loved...," indicating they are **separated** and not currently living in a traditional marriage.
+
+**Children:**
+- The user refers to several children:
+  - **Charlie**: Various posts mention his age over the years. Most recently, they mentioned his 11th birthday.
+  - **Jude**: Posts indicate he’s around 9 years old ("He’s 9 today”).
+  - **Billie**: The child’s various milestones are frequently mentioned, confirming Billie is about 1 year old.
+  - Additionally, the user announced expecting baby #3 in October 2022. Given the various mentions of Billie’s milestones such as 11 months ("Billie is 11 months old"), Billie seems to be child #3.
+
+Given these details, the user has three children: **Charlie (11), Jude (9), and Billie (1)**.
+
+**Location:**
+- The user frequently refers to living in the United States, with mentions of Austin, Texas ("...Jude was born in Austin, Texas" and “moved back to Austin, TX…”). Thus, the current location is **Austin, Texas, USA**.
+
+**Occupation:**
+- The user mentions activities such as writing books, being a keynote speaker at an event, and managing another Instagram account. They also mention coping with criticism regarding social media posts and interactions. Combined with the public nature of the posts and the collaborative advertising with brands, it is likely they are a **Social Media Influencer/Author**, as they also mention their book and writing, particularly "My second book, “Be The One,” is currently being printed and will be released mid-June by thoughtcatalog."
+
+**Summary:**
+- **Age**: 33 years old
+- **Marital Status**: Separated
+- **Children**: Three – Charlie (11), Jude (9), and Billie (1)
+- **Current Location**: Austin, Texas, USA
+- **Occupation**: Social Media Influencer/Author
+############# End Log ###############
+############# Log: Brand Affinity Longform Report ###############
+{'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None}],
+ 'created': 1719942734,
+ 'id': 'chatcmpl-9gbxmwGOtGFz4SJuJayXR4B1WPJyt',
+ 'model': 'gpt-4o-2024-05-13',
+ 'object': 'chat.completion',
+ 'service_tier': None,
+ 'system_fingerprint': 'fp_d576307f90',
+ 'usage': {'completion_tokens': 591,
+           'prompt_tokens': 11255,
+           'total_tokens': 11846}}
+From the content provided, we can make some observations about the user's relationship with various brands:
+
+### Strong Relationships with Brands:
+1. **Modern Burlap**:
+   - Hashtags and mentions like "#modernburlap" indicate the user uses and publicly appreciates this brand, likely for baby-related products.
+
+2. **Light by Iris Photography**:
+   - Mentions such as "📸 lightbyiris" suggest the user relies on this brand for family or professional photography.
+
+3. **Swanky Shank**:
+   - Mention of "Tees from swankyshank" indicates a preference for their clothing items, particularly tees.
+
+4. **Kinetic Sand**:
+   - The user bought "pounds of Kinetic sand" for her child's birthday, showing a preference for this brand in sensory toys.
+
+5. **Shapermint**:
+   - The user has teamed up with Shapermint and even uses a promo code in their posts, indicating a partnership or significant affinity with the brand.
+
+6. **Lillebaby**:
+   - Mentions like "#lillebaby #lillelove" indicate a positive experience and use of Lillebaby baby carriers.
+
+7. **Thought Catalog**:
+   - The mention of the user's book "Be The One" being published by Thought Catalog suggests a professional relationship with the publisher.
+
+### Moderate Relationship with Brands:
+1. **Zara Baby**:
+   - The hashtag "#zarababy" shows use and preference for Zara's baby clothing line, though it may not be as frequent.
+
+2. **At-a-Glance**:
+   - The user mentions using an "_at_a_glance planner" for organization, showing appreciation and use of this brand's planners.
+
+3. **Cord Blood Registry**:
+   - The use of hashtags like "#cordbloodregistry" and "#cordbloodawarenessmonth #ad" suggests a sponsored relationship or partnership.
+
+4. **WaterWipesUSA**:
+   - The user collaborates with WaterWipesUSA, as seen from the hashtag "#WaterWipesPartner," indicating a professional relationship.
+
+### Emerging or Occasional Relationships with Brands:
+1. **Moms in Knots**:
+   - The user mentions a "pic momsinknots," possibly indicating collaboration or use of their services.
+
+2. **Instainspire Retreat**:
+   - The user is participating as a keynote speaker, showing an emerging relationship that might grow stronger.
+
+### No Clear Relationship but Potential Affinity:
+1. **Pokemon and Minecraft**:
+   - The user's children show keen interests in these brands, which might indicate indirect brand influence in the household.
+
+Overall, the user demonstrates a mix of strong, moderate, and emerging relationships with a variety of brands, primarily focused on baby products, sensory toys, maternity wear, and anxiety support. These brands resonate with the user's focus on family life, child development, and personal well-being.
+############# End Log ###############
+############# Log: Biography Json ###############
+{'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None}],
+ 'created': 1719942746,
+ 'id': 'chatcmpl-9gbxyTFeD2D1TSCZIHB8GOebbzc1U',
+ 'model': 'gpt-4o-2024-05-13',
+ 'object': 'chat.completion',
+ 'service_tier': None,
+ 'system_fingerprint': 'fp_d576307f90',
+ 'usage': {'completion_tokens': 155,
+           'prompt_tokens': 11333,
+           'total_tokens': 11488}}
+```json
+{
+  "age": 33,
+  "ageEstimate": "User mentions turning 30 recently and mentions their 33rd birthday on Feb 3rd, 2023",
+  "maritalStatus": "Uncertain",
+  "maritalStatusEstimate": "User mentions being separated from Willy but co-parenting",
+  "numberOfChildren": 3,
+  "numberOfChildrenEstimate": "Mentions having three children: Billie, Jude, and Charlie",
+  "location": "Austin, Texas",
+  "locationEstimate": "User mentions moving back to Austin, TX and Charlie being born in Boston",
+  "occupation": "Author",
+  "occupationEstimate": "User mentions writing books and being published by Thought Catalog"
+}
+```
+############# End Log ###############
+############# Log: Brand Affinity JSON ###############
+{'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None}],
+ 'created': 1719942752,
+ 'id': 'chatcmpl-9gby4PHSbOQjCtKI9SO5at8J9yiYG',
+ 'model': 'gpt-4o-2024-05-13',
+ 'object': 'chat.completion',
+ 'service_tier': None,
+ 'system_fingerprint': 'fp_4008e3b719',
+ 'usage': {'completion_tokens': 431,
+           'prompt_tokens': 11321,
+           'total_tokens': 11752}}
+From the content provided, we can make some observations about the user's relationship with various brands:
+
+### Strong Relationships with Brands:
+1. **Modern Burlap**:
+   - Hashtags and mentions like "#modernburlap" indicate the user uses and publicly appreciates this brand, likely for baby-related products.
+
+2. **Light by Iris Photography**:
+   - Mentions such as "📸 lightbyiris" suggest the user relies on this brand for family or professional photography.
+
+3. **Swanky Shank**:
+   - Mention of "Tees from swankyshank" indicates a preference for their clothing items, particularly tees.
+
+4. **Kinetic Sand**:
+   - The user bought "pounds of Kinetic sand" for her child's birthday, showing a preference for this brand in sensory toys.
+
+5. **Shapermint**:
+   - The user has teamed up with Shapermint and even uses a promo code in their posts, indicating a partnership or significant affinity with the brand.
+
+6. **Lillebaby**:
+   - Mentions like "#lillebaby #lillelove" indicate a positive experience and use of Lillebaby baby carriers.
+
+7. **Thought Catalog**:
+   - The mention of the user's book "Be The One" being published by Thought Catalog suggests a professional relationship with the publisher.
+
+### Moderate Relationship with Brands:
+1. **Zara Baby**:
+   - The hashtag "#zarababy" shows use and preference for Zara's baby clothing line, though it may not be as frequent.
+
+2. **At-a-Glance**:
+   - The user mentions using an "_at_a_glance planner" for organization, showing appreciation and use of this brand's planners.
+
+3. **Cord Blood Registry**:
+   - The use of hashtags like "#cordbloodregistry" and "#cordbloodawarenessmonth #ad" suggests a sponsored relationship or partnership.
+
+4. **WaterWipesUSA**:
+   - The user collaborates with WaterWipesUSA, as seen from the hashtag "#WaterWipesPartner," indicating a professional relationship.
+
+### Emerging or Occasional Relationships with Brands:
+1. **Moms in Knots**:
+   - The user mentions a "pic momsinknots," possibly indicating collaboration or use of their services.
+
+2. **Instainspire Retreat**:
+   - The user is participating as a keynote speaker, showing an emerging relationship that might grow stronger.
+
+### No Clear Relationship but Potential Affinity:
+1. **Pokemon and Minecraft**:
+   - The user's children show keen interests in these brands, which might indicate indirect brand influence in the household.
+
+Overall, the user demonstrates a mix of strong, moderate, and emerging relationships with a variety of brands, primarily focused on baby products, sensory toys, maternity wear, and anxiety support. These brands resonate with the user's focus on family life, child development, and personal well-being.
+############# End Log ###############
+=============
+TIME FINISH:  02/07/2024 17:52:40
+=============
+
+
+
+
