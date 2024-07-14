@@ -1,7 +1,6 @@
 ---
 title: "Bookshelf"
 description: "My multimedia reading list."
-draft: false
 aliases:
   - Reading List
   - Book tracker
@@ -9,6 +8,7 @@ tags:
   - "evergreen"
 date_created: "2024-07-09T12:50:03"
 date: "2024-07-09T12:53:11"
+publish: "true"
 ---
 
 Keeping track of all the books I'm reading. Will reference them to other atomic notes elsewhere.
