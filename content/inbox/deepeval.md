@@ -96,3 +96,110 @@ def test_case():
 
 Set `OPENAI_API_KEY` as environment variable (can also evaluate using custom models; [check out these docs for using custom models](https://docs.confident-ai.com/docs/metrics-introduction#using-a-custom-llm))
 
+Finally, run `test_chatbot.py` in the CLI:
+  - `deepeval test run test_chatbot.py`
+
+This test should have passed. Here's a breakdown of what happened:
+  - Variable `input` mimics user input, and the `actual_output` is a placeholder for chatbot's intended output based in `input`
+  - `retrieval_context` contains relevant information from knowledge base and `AnswerRelevancyMetric(threshold=0.5)` is out-of-the-box metric provided by DeepEval. Helps evaluate relevancy of LLM output based on context.
+    - TODO: How does this really work under the hood?
+  - Metric score ranges from 0-1. `threshold=0.5` threshold determines whether test has passed or not, similar to [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression#:~:text=Logistic%20regression%20is%20a%20supervised,based%20on%20patient%20test%20results.). 
+
+[Here are additional docs](https://docs.confident-ai.com/docs/getting-started) for more information on how to:
+  - use additional metrics
+  - create custom metrics
+  - tutorials on how to integrate with other tools like LangChain and LlamaIndex
+
+
+## Evaluating Without Pytest Integration
+This is best suited for notebook-based environments. 
+
+```python
+from deepeval import evaluate
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.test_case import LLMTestCase
+
+answer_relevancy_metric = AnswerRelevancyMetric(threshold=0.7)
+test_case = LLMTestCase(
+    input="What if these shoes don't fit?",
+    # Replace this with the actual output from your LLM application
+    actual_output="We offer a 30-day full refund at no extra costs.",
+    retrieval_context=["All customers are eligible for a 30 day full refund at no extra costs."]
+)
+evaluate([test_case], [answer_relevancy_metric])
+```
+
+## Using Standalone Metrics
+DeepEval is "extremely modular", maling it easy for anyone to use their metrics. 
+
+```python
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.test_case import LLMTestCase
+
+answer_relevancy_metric = AnswerRelevancyMetric(threshold=0.7)
+test_case = LLMTestCase(
+    input="What if these shoes don't fit?",
+    # Replace this with the actual output from your LLM application
+    actual_output="We offer a 30-day full refund at no extra costs.",
+    retrieval_context=["All customers are eligible for a 30 day full refund at no extra costs."]
+)
+
+# Note the new API for evaluation
+answer_relevancy_metric.measure(test_case)
+print(answer_relevancy_metric.score)
+# Most metrics also offer an explanation
+print(answer_relevancy_metric.reason)
+```
+
+## Evaluating a Dataset / Test Cases in Bulk
+> [!NOTE]
+> In DeepEval, a dataset is simply a collection of test cases. Here is how you can evaluate them in bulk:
+
+```python
+import pytest
+from deepeval import assert_test
+from deepeval.metrics import HallucinationMetric, AnswerRelevancyMetric
+from deepeval.test_case import LLMTestCase
+from deepeval.dataset import EvaluationDataset
+
+first_test_case = LLMTestCase(input="...", actual_output="...", context=["..."])
+second_test_case = LLMTestCase(input="...", actual_output="...", context=["..."])
+
+dataset = EvaluationDataset(test_cases=[first_test_case, second_test_case])
+
+@pytest.mark.parametrize(
+    "test_case",
+    dataset,
+)
+def test_customer_chatbot(test_case: LLMTestCase):
+    hallucination_metric = HallucinationMetric(threshold=0.3)
+    answer_relevancy_metric = AnswerRelevancyMetric(threshold=0.5)
+    assert_test(test_case, [hallucination_metric, answer_relevancy_metric])
+```
+
+Run this in the CLI, you can also add an optional `-n` flag to run tests in parallel.
+`deepeval test run test_<filename>`
+
+Alternatively, we can evaluate a dataset/test cases without using Pytest integration:
+
+```python
+from deepeval import evaluate
+...
+
+evaluate(dataset, [answer_relevancy_metric])
+# or
+dataset.evaluate([answer_relevancy_metric])
+```
+
+# Real-time Evaluations on Confident AI
+There is a free web platform to:
+1. Log and view all the test results / metrics data from DeepEval's test runs.
+2. Debug evaluation results via LLM traces. 
+3. Compare and pick optimal hyperparameters as mentioned previously.
+4. Create, manage, and centralize evaluation datasets. 
+5. Track events in production and augment evaluation dataset for [continuous evaluation of LLMs](https://semaphoreci.com/blog/llms-continuous-evaluation)
+6. Track events in production, view evaluation results and historical insights. 
+
+Everything on Confident AI integration is located [here](https://docs.confident-ai.com/docs/confident-ai-introduction).
+
+
