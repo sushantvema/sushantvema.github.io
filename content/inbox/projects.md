@@ -1,20 +1,19 @@
 ---
 title: "Personal Projects"
-draft: true
 tags:
   - private
   - inbox
+publish: true
 ---
 
 # Projects
 
 ## Personal Technical Projects
 
-- Markdown LSP, intelligence
 - Markdown RAG system
-- Markdown knowledge garden version control
+- Markdown knowledge garden version control. I can do this using an obsidian git plugin that auto-pushes to a repository every so often.
 - Self-hosted Kanban tools?
-- Add yabai config file to dotfiles and add alt direction motions 
+- Add yabai config file to dotfiles and add alt direction motions
 - Figure out the issue with mason-lspconfig and why some LSP servers aren't changing
 - Change default color scheme for neovim and alacrity to slate
 - Markdown-based static website design
@@ -25,6 +24,8 @@ tags:
 - Explore multi-agent AI
 - Customize neovim terminal so that it automatically sources bashrc
 - configure telescope pickers to wrap file names
+- [x] Zenmode plugin for neovim
+- [x] Markdown LSP, intelligence
 
 ## Personal Projects at Home
 
