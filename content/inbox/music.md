@@ -1,5 +1,5 @@
 ---
-title: "Music - the shorthand of emotion"
+title: "Music: the shorthand of emotion"
 description: "A voyage into my identity through the lens of music"
 author: "Sushant Vema"
 date_created: "2024-07-13T21:01:02"
