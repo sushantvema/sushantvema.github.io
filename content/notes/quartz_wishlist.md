@@ -14,6 +14,7 @@ publish: true
   - ideas: hacks with `.gitignore`, glob patterns, modified YAML frontmatter to toggle visibility in local builds
 - Rendering [Unicode](https://home.unicode.org/) in order to write other languages primarily
   - Check out this article: [How to Insert Unicode Characters in Neovim/Vim - jdhao](https://jdhao.github.io/2020/10/07/nvim_insert_unicode_char/)
+- How to make recent notes component scrollable?
 
 # Done  
 - 2024-07-11T07:44:24: Use the [ExplicitPublish plugin](https://quartz.jzhao.xyz/plugins/ExplicitPublish) instead of the [RemoveDrafts plugin](https://quartz.jzhao.xyz/plugins/RemoveDrafts) universally across my knowledge ocean.

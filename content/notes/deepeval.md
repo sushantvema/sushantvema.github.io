@@ -14,7 +14,7 @@ This document will represent my takeaways from doing a deep-dive on DeepEval, an
 # References and Communities
 - [Confident AI Weekly Newsletter](https://www.confident-ai.com/blog)
 - [DeepEval Official Discord community](https://discord.com/invite/a3K9c8GRGt)
-# Takeaways
+# Sushant's Takeaways
 DeepEval provides an easily understandable and extensible taxonomy within its API for building evaluation frameworks. It comes with a full-featured CLI tool and Python API.
 
 The most important component is its [metrics](https://github.com/confident-ai/deepeval/tree/main/deepeval/metrics). It represents a list of curated categories of metrics which we can pick and choose per the nature of our LLM application and domain. Here's a list of natively-supported metrics, but there is [documentation on how to create custom metrics for yourself](https://docs.confident-ai.com/docs/metrics-custom). 
@@ -413,7 +413,7 @@ print("Reason: ", answer_relevancy.reason)
 faithfulness.measure(test_case)
 print("Score: ", faithfulness.score)
 print("Reason: ", faithfulness.reason)
-```
+
 # Or in bulk
 from deepeval import evaluate
 ...
@@ -421,7 +421,8 @@ from deepeval import evaluate
 evaluate(
     test_cases=[test_case],
     metrics=[answer_relevancy, faithfulness]
-)
+
+```
 
 ## Beyond Generic Evaluation
 These RAG metrics are useful but extremely generic. For example, if, for some reason, I wanted my RAG-absed chatbot to answer questions in a particular style or tone of voice, how could I evaluate that?
@@ -535,7 +536,7 @@ def custom_parameters():
     }
 ```
 > [!TIP]
-> You can just return an empty dictionary `{}` if you don't have any customer params to log.
+> You can just return an empty dictionary `{}`
 
 # Real-time Evaluations on Confident AI
 There is a free web platform to:
