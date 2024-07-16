@@ -11,6 +11,9 @@ publish: true
 
 This document will represent my takeaways from doing a deep-dive on DeepEval, an open-source LLm evaluation framework. This research is motivated by a current initiative to build robust evaluation pipelines during my [[letter_to_potential_employers#Data Science / ML Engineering @ Influential.co|contract project at Influential.co]]. 
 
+# References and Communities
+- [Confident AI Weekly Newsletter](https://www.confident-ai.com/blog)
+- [DeepEval Official Discord community](https://discord.com/invite/a3K9c8GRGt)
 # Takeaways
 DeepEval provides an easily understandable and extensible taxonomy within its API for building evaluation frameworks. It comes with a full-featured CLI tool and Python API.
 
@@ -51,6 +54,13 @@ DeepEval allows us to [use any custom LLM for evaluation](https://docs.confident
 There are also protocols for Async and debugging metrics.
 
 DeepEval is a framework developed by Confident AI. DeepEval can integrate into their platform which is similar to other monitoring platforms. But it isn't self-hostable. I need to work on designing an integration between DeepEval and MLflow, since MLflow is default in Databricks platforms.
+
+DeepEval documentation also provides an assortment of useful guides, similar to [OpenAI Cookbook](https://cookbook.openai.com/):
+  - [RAG Evaluation using DeepEval](https://docs.confident-ai.com/docs/guides-rag-evaluation)
+  - [Optimizing Hyperparameters Using DeepEval](https://docs.confident-ai.com/docs/guides-optimizing-hyperparameters)
+  - [Regression Testing LLM Systems in CI/CD Using DeepEval](https://docs.confident-ai.com/docs/guides-regression-testing-in-cicd)
+  - [Building Custom LLM Metrics in DeepEval](https://docs.confident-ai.com/docs/guides-building-custom-metrics)
+  - [Answer Correctness Metric in DeepEval](https://docs.confident-ai.com/docs/guides-answer-correctness-metric)
 
 # Intro to DeepEval
 [DeepEval](https://github.com/confident-ai/deepeval) is an open-source LLM evaluation framework created in August 2023 by [Confident AI](https://www.confident-ai.com/).
