@@ -12,7 +12,7 @@ publish: true
 This document will represent my takeaways from doing a deep-dive on DeepEval, an open-source LLm evaluation framework. This research is motivated by a current initiative to build robust evaluation pipelines during my [[letter_to_potential_employers#Data Science / ML Engineering @ Influential.co|contract project at Influential.co]]. 
 
 # Takeaways
-DeepEval provides an easily understandable and extensible taxonomy within its API for building evluation frameworks. 
+DeepEval provides an easily understandable and extensible taxonomy within its API for building evaluation frameworks. It comes with a full-featured CLI tool and Python API.
 
 The most important component is its [metrics](https://github.com/confident-ai/deepeval/tree/main/deepeval/metrics). It represents a list of curated categories of metrics which we can pick and choose per the nature of our LLM application and domain. Here's a list of natively-supported metrics, but there is [documentation on how to create custom metrics for yourself](https://docs.confident-ai.com/docs/metrics-custom). 
 - answer_relevancy
@@ -30,7 +30,29 @@ The most important component is its [metrics](https://github.com/confident-ai/de
 
 > [!NOTE]
 > > "DeepEval and RAGAs have very similar implementations, but RAGAs metrics are not self-explaining, mkaing it much harder to debug unsatisfactory results." - [Top 5 Open-Source LLM Evaluation Frameworks in 2024](https://dev.to/guybuildingai/-top-5-open-source-llm-evaluation-frameworks-in-2024-98m#:~:text=DeepEval%20and%20RAGAs%20have%20very,harder%20to%20debug%20unsatisfactory%20results.)
+There is a notion of a `Dataset` (an evaluation dataset) which is a collection of `LLMTestCase`s and/or `Golden`s. There are two paradigmatic approaches to evaluating datasets in `deepeval`:
+  - using `@pytest.mark.parametrize` and `assert_test`
+  - using `evaluate`
 
+> [!NOTE]
+  > A `Golden` is very similar to an `LLMtestCase` but they are more flexible since they don't require an `actual_output` at initialization. *While test cases are always ready for evaluation, a `Golden` isn't.*   
+
+There's almost something called a [Synthesizer](https://docs.confident-ai.com/docs/evaluation-datasets-synthetic-data) which looks interesting. This feels like some sort of iterative process to generate at best a "realistic" "out of sample" evaluation dataset or at worst, a vast corpus of data of different complexities, which might cover unexpected edge cases. Here's a [great article about how deepeval's Synthesizer was built](https://www.confident-ai.com/blog/the-definitive-guide-to-synthetic-data-generation-using-llms).
+
+Another useful abstraction is [Metrics](https://docs.confident-ai.com/docs/metrics-introduction) and [Test Cases](https://docs.confident-ai.com/docs/evaluation-test-cases). Think of metrics as "rulers" and test cases as what you're actually measuring. There are custom and default metrics. Metrics can be other `LLM-Eval` or `classic` metrics. A classic metric is one whose criteria isn't evaluated using an LLM. This quote from the docs provides great insight into how DeepEval implements LLM evaluations:
+> deepeval also offers default metrics. Most default metrics offered by deepeval are LLM-Evals, which means they are evaluated using LLMs. This is deliberate because LLM-Evals are versatile in nature and better align with human expectations when compared to traditional model based approaches.
+deepeval's LLM-Evals are a step up to other implementations because they:
+- are extra reliable as LLMs are only used for extremely specific tasks during evaluation to greatly reduce stochasticity and flakiness in scores.
+- provide a comprehensive reason for the scores computed.
+All of deepeval's default metrics output a score between 0-1, and require a threshold argument to instantiate. A default metric is only successful if the evaluation score is equal to or greater than threshold.
+
+DeepEval allows us to [use any custom LLM for evaluation](https://docs.confident-ai.com/docs/metrics-introduction#using-a-custom-llm). Although not explicitly mentioned, we should be able to use the OpenAI API with our model-serving endpoint on Databricks with no problem
+
+There are also protocols for Async and debugging metrics.
+
+DeepEval is a framework developed by Confident AI. DeepEval can integrate into their platform which is similar to other monitoring platforms. But it isn't self-hostable. I need to work on designing an integration between DeepEval and MLflow, since MLflow is default in Databricks platforms.
+
+# Intro to DeepEval
 [DeepEval](https://github.com/confident-ai/deepeval) is an open-source LLM evaluation framework created in August 2023 by [Confident AI](https://www.confident-ai.com/).
 > Pytest unit-testing but for LLM outputs
 

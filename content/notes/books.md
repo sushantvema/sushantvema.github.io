@@ -20,6 +20,7 @@ Here is [my Goodreads account](https://www.goodreads.com/user/show/164917702-sus
 - [Note-taking Systems: the PARA Method](https://substack.com/app-link/post?publication_id=2694469&post_id=146389764&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=3mkjzk&token=eyJ1c2VyX2lkIjoyMTkzMDkxMDQsInBvc3RfaWQiOjE0NjM4OTc2NCwiaWF0IjoxNzIwNzA4NTc1LCJleHAiOjE3MjMzMDA1NzUsImlzcyI6InB1Yi0yNjk0NDY5Iiwic3ViIjoicG9zdC1yZWFjdGlvbiJ9.Kb-9_lq0-1ca3LxobmsWK_55JPuTV0XaoefarNMpbvk)
 - [Introduction to Information Retrieval - Manning, et al.](https://nlp.stanford.edu/IR-book/information-retrieval-book.html)
 - [DeepEval Synthesizer abstraction](https://docs.confident-ai.com/docs/evaluation-datasets-synthetic-data)
+- [arxiv- WizardLM: Empowering Large Language Models to Follow Complex Instructions](https://arxiv.org/abs/2304.12244)
 ## Reading
 - [The Universe in a Single Atom: The Convergence of Science and Spirituality - Dalai Lama XIV](https://www.goodreads.com/book/show/100629.The_Universe_in_a_Single_Atom)
 - [The Art of Contemplation - Pujya Chinmayananda](https://www.goodreads.com/book/show/40721721-art-of-contemplation)

@@ -3,7 +3,7 @@ title: "All About Coffee and How I Make It"
 description: "Notes about coffee."
 author: "Sushant Vema"
 date_created: "2024-07-11T07:31:56"
-date: "2024-07-11T08:50:54"
+date: "2024-07-16T10:08:45"
 tags:
   - "coffee"
 publish: true
@@ -43,3 +43,11 @@ Source: [James Hoffman- V60 Ambassador Q&A and V60 Recipe](https://www.hario-eur
   - 180 grams pour with agitation in 30 seconds
   - pour the rest slowly
   - stir the sides with a spooon
+
+2024-07-16:
+  - 14 clicks for my [Timemore Chestnut C3 manual grinder](https://www.timemore.com/products/timemore-chestnut-c3-esp-manual-coffee-grinder-1) (which I got for 47 bucks on AliExpress)
+  - Costco dark roast blend from Pacific Northwest (don't remember the name)
+  - 17.5 grams of coffee
+  - 275ml water
+  - 2m45s total drawdown time
+  - very pleasant brew. should be able to get another decent extraction in the afternoon. 

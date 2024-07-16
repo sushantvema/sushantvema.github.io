@@ -2,7 +2,7 @@
 title: "the greatest peace"
 description: "sushant's knowledge ocean"
 date_created: "2024-07-09"
-date: "2024-07-16T09:23:46"
+date: "2024-07-16T10:01:11"
 publish: true
 tags:
   - "evergreen"
@@ -39,4 +39,8 @@ This ocean will primarily focus on:
 
 I like the idea of [static site generators](https://en.wikipedia.org/wiki/Static_site_generator)  because they give us an easy and widely-accessible way to connect with others and receive (hopefully) positive reinforcement.
 
-This summer (2024) I'm writing some notes on [[computer_security|Computer Security]]. I'm also studying computer architecture, numerical analysis, and building LLM applications for production. Personally, I have a great interest in UNIX-based design, terminal-centered workflows/productivity, and cooking. Come to think of it, I have a lot to share with the world (maybe represented by the [[subreddits|insanely long list of subreddits I'm subscribed to]]). I'll be synthesizing my knowledge on these topics daily and bringing them forward to the landing page here once they're ready. See you around! 🫡
+This summer (2024) I'm writing some notes on [[computer_security|Computer Security]]. I'm also studying computer architecture, numerical analysis, and building LLM applications for production. Personally, I have a great interest in UNIX-based design, terminal-centered workflows/productivity, and cooking. Come to think of it, I have a lot to share with the world (maybe represented by the [[subreddits|insanely long list of subreddits I'm subscribed to]]). 
+
+I've recently started to being a [[coffee|coffee snob]], get back into [[books|reading]], and starting my [[calisthenics|calisthenics]] journey.
+
+I'll be synthesizing my knowledge on these topics daily and bringing them forward to the landing page here once they're ready. See you around! 🫡
