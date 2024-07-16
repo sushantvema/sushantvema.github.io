@@ -15,6 +15,8 @@ tags:
 > The name Sushant is of Indian origin and is commonly used as a masculine given name.
 The meaning of the name Sushant is often interpreted as "calm" or "peaceful" in the Sanskrit language. It is derived from the combination of two Sanskrit words: "su" meaning "good" or "well" and "shant" meaning "calm" or "peaceful." 🕉️
 
+> Our beliefs about what drive insight determine the outcome as much as the tools we use. – Tiago Forte
+
 I believe in "plaintext everything", but sometimes it's nice to see the plain things nicely. I'm grateful to the [gh/jackyzh0/quartz](https://github.com/jackyzha0/quartz) project for providing me such a beautiful medium for expression.
 
 Hi! My name is Sushant. I don't know what to put here that will truly represent who I *think* I am. But I am sure that this introduction area will reach some sort of steady state in the future. 

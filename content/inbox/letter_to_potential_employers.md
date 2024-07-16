@@ -14,7 +14,10 @@ publish: true
 
 Dear Potential Employers,
 
-My name is Sushant Harischandra Vema. Since June 2024, I have been working at Influential.co as a Junior Data Science Engineer. Influential is a global leader in influencer marketing. Founded in 2013, the platform leverages a network of 3.5 million+ creators across all major social media platforms, bringing "human passion and creativity together together to create real-world business results". I work alongside a lean team of extremely talented Data Scientists, Architects, and Analysts. My current job responsibilities prioritized by impact include:
+My name is Sushant Harischandra Vema.
+
+# Data Science / ML Engineering @ Influential.co
+Since June 2024, I have been working at Influential.co as a Data Science Engineer. Influential is a global leader in influencer marketing. Founded in 2013, the platform leverages a network of 3.5 million+ creators across all major social media platforms, bringing "human passion and creativity together together to create real-world business results". I work alongside a lean team of extremely talented Data Scientists, Architects, and Analysts. My current job responsibilities prioritized by impact include:
   - Designing and scaling a multi-stage Retrieval-Augmented Generation system to create extractive and abstractive summaries of hundreds of thousands of influencers in our database.
   - Assisting in an enterprise-wide migration to Databricks hosted on AWS, from POC to deployment.
     - Writing dataprocessing tools and templates in Pyspark for parallel processing. 

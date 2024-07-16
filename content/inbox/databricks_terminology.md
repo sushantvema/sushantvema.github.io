@@ -11,4 +11,5 @@ tags:
 
 # Accounts and Workspaces
 - a workspace is an instance of a Databricks deployment on the cloud
--
+
+
