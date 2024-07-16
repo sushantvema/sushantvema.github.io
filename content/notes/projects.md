@@ -1,8 +1,7 @@
 ---
 title: "Personal Projects"
 tags:
-  - private
-  - inbox
+  - "inbox"
 publish: true
 ---
 
