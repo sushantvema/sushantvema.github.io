@@ -5,8 +5,31 @@ date_created: "2024-07-15T13:33:35"
 date: "2024-07-15T13:33:38"
 tags:
   - "technical"
+  - "Large Language Models (LLMs)"
 publish: true
 ---
+
+This document will represent my takeaways from doing a deep-dive on DeepEval, an open-source LLm evaluation framework. This research is motivated by a current initiative to build robust evaluation pipelines during my [[letter_to_potential_employers#Data Science / ML Engineering @ Influential.co|contract project at Influential.co]]. 
+
+# Takeaways
+DeepEval provides an easily understandable and extensible taxonomy within its API for building evluation frameworks. 
+
+The most important component is its [metrics](https://github.com/confident-ai/deepeval/tree/main/deepeval/metrics). It represents a list of curated categories of metrics which we can pick and choose per the nature of our LLM application and domain. Here's a list of natively-supported metrics, but there is [documentation on how to create custom metrics for yourself](https://docs.confident-ai.com/docs/metrics-custom). 
+- answer_relevancy
+- bias
+- contextual_precision
+- contextual_recall
+- contextual_relevancy
+- faithfulness
+- g_eval
+- hallucination
+- knowledge_retention
+- summarization
+- toxicity
+- ragas (most of the same metrics as above, but evaluated with ragas)
+
+> [!NOTE]
+> > "DeepEval and RAGAs have very similar implementations, but RAGAs metrics are not self-explaining, mkaing it much harder to debug unsatisfactory results." - [Top 5 Open-Source LLM Evaluation Frameworks in 2024](https://dev.to/guybuildingai/-top-5-open-source-llm-evaluation-frameworks-in-2024-98m#:~:text=DeepEval%20and%20RAGAs%20have%20very,harder%20to%20debug%20unsatisfactory%20results.)
 
 [DeepEval](https://github.com/confident-ai/deepeval) is an open-source LLM evaluation framework created in August 2023 by [Confident AI](https://www.confident-ai.com/).
 > Pytest unit-testing but for LLM outputs
@@ -202,4 +225,5 @@ There is a free web platform to:
 
 Everything on Confident AI integration is located [here](https://docs.confident-ai.com/docs/confident-ai-introduction).
 
-
+# References
+- [[llm_evaluation|LLM Evaluation]]
