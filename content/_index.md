@@ -20,8 +20,9 @@ The meaning of the name Sushant is often interpreted as "calm" or "peaceful" in 
 I believe in "plaintext everything", but sometimes it's nice to see the plain things nicely. I'm grateful to the [gh/jackyzh0/quartz](https://github.com/jackyzha0/quartz) project for providing me such a beautiful medium for expression.
 
 Hi! My name is Sushant. I don't know what to put here that will truly represent who I *think* I am. But I am sure that this introduction area will reach some sort of steady state in the future. 
-
-It'll take a while for my to properly index my landing page, but there are many many notes I'm working on scattered throughout the ocean. I encourage you all to liberally use the Search function. The hotkey is `Command + K`. Additionally, most, if not all, of the notes I've currently published are [tagged and indexed here](https://sushantvema.github.io/tags/). 
+> [!IMPORTANT]
+> It'll take a while for my to properly index my landing page, but there are many many notes I'm working on scattered throughout the ocean. I encourage you all to liberally use the Search function. The hotkey is `Command + K`. Additionally, most, if not all, of the notes I've currently published are [tagged and indexed here](https://sushantvema.github.io/tags/).
+ 
 
 ```bash
 ls ~/my_brain | grep "real knowledge"
