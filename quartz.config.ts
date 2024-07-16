@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🌊 sushant's knowledge garden",
+    pageTitle: "🌊 sushant's knowledge ocean",
     enableSPA: true,
     enablePopovers: true,
     analytics: {

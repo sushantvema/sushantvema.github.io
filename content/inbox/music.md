@@ -9,6 +9,7 @@ tags:
   - "seedling"
 publish: true
 ---
+Follow my [Spotify account](https://open.spotify.com/user/blubstrikesback?si=131c3c381e234cbe)!
 
 # Quotes about music
 > Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything. - Plato
