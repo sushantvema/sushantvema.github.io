@@ -9,7 +9,7 @@ tags:
 publish: true
 ---
 
-This document will represent my takeaways from doing a deep-dive on DeepEval, an open-source LLm evaluation framework. This research is motivated by a current initiative to build robust evaluation pipelines during my [[letter_to_potential_employers#Data Science / ML Engineering @ Influential.co|contract project at Influential.co]]. 
+This document will represent my takeaways from doing a deep-dive on DeepEval, an open-source LLM evaluation framework. This research is motivated by a current initiative to build robust evaluation pipelines during my [[letter_to_potential_employers#Data Science / ML Engineering @ Influential.co|contract project at Influential.co]]. 
 
 # References and Communities
 - [Confident AI Weekly Newsletter](https://www.confident-ai.com/blog)
@@ -245,6 +245,297 @@ evaluate(dataset, [answer_relevancy_metric])
 # or
 dataset.evaluate([answer_relevancy_metric])
 ```
+
+# RAG Evaluation Guide
+> [!NOTE]
+> The Processes of retrieving relevant context is carried out by the **retriever**, generating responses based on the **retrieval context**  is carried out by the **generator** . Together, the retriever and generator form your **RAG Pipeline**. 
+
+RAG evaluation focuses on evaluating retriever and generator separately, allowing for easier debugging and component-level issue identification. 
+
+Retriever Metrics:
+  - Contextual Recall
+  - Contextual Precision
+  - Contextual Relevancy
+
+Generator Metrics:
+  - Answer Relevancy
+  - Faithfulness
+
+## Common Pitfalls in RAG Pipelines  
+There are many hyperparameters which affect the retrieval and generation processes in RAG:
+  - Choice of embedding model for retrieval
+  - Number of nodes to retrieve (usually referred to as "top-k")
+  - LLM temperature
+  - prompt templates
+  - many more
+
+### Retrieval
+1. **Vectorizing initial input into an embedding**, using an embedding model of your choice (for example, OpenAI's `text-embedding-3-large` model)
+2. **Performing a vector search** by using the previously embedding input on the vector store that contains vectorized knowledge base in order to retrieve the top-K most "similar" vectorized text chunks in the vector store.
+3. **Rerank the retrieved nodes.** This is a step that's just recently gaining in realized importance. The initial ranking provided by the vector search might not always align perfrectly with the specific relevance for our specific use-case.
+
+> [!NOTE]
+> A "vector store" can either be a dedicated [[vector_database|vector database]] (e.g [Pinecone](https://www.pinecone.io/)) or a vector extension of an existing database like PostgresQL (e.g pgvector). You **MUST** populate vector store before any retrieval by chunking and vectorizing the relevant documents in knowledge base. Here are some questions RAG evaluation aims to solve in the retrieval step:
+  - **Does embedding model you are using capture domain-specific nuances?** For example, if we're working on a medical use case, a generic embedding model offered by OpenAI might not provide the expected vector search results.
+  - **Does the reranker model rank the retrieved nodes in the "correct" order?**
+  - **Are you retrieving the "right" amount of information?** This is influenced by hyperparameters such as text chunk size, and top-K number.
+
+### Generation  
+1. **Constructing a prompt** based on initial input and the previous vector-fetched retrieval context. 
+2. **Providing this prompt to LLM,** yielding the final augmented output.
+
+This step is typically more straightforward due to standardized LLMs. Some questions RAG evaluation can answer in the generation step:
+  - **[Can we use a smaller, faster, cheaper LLM?](https://olympics.com/ioc/faq/olympic-symbol-and-identity/what-is-the-olympic-motto)** This often involves exploring open-source alternatives like LLaMA-2, Mistral &B, and fine-tunes of those. 
+  - **Would a higer temperature give better results?** TODO: Not sure what the intuition is for this one, or if it's purely experimental. 
+  - **How does changing the prompt template affect output quality?** This is where most LLM practitioners spend most time on.
+
+As a rule of thumb, practitioners tend to start with SotA models like `gpt-4-turbo` and `claude-3-opus`. Then they move onto smaller or fine-tuned models where possible. The complexity expands dramatically when we get to A/B testing different versions of prompt templates. 
+
+## Evaluating Retrieval
+Three metrics to evaluate retrievals:
+  - `ContextualPrecisionMetrics`: Evaluates whether the **reranker** in retriever ranks more relevant nodes in a retrieval context higher than the irrelevant ones. [Documentation and algorithm for ContextualPrecision](https://docs.confident-ai.com/docs/metrics-contextual-precision)
+  -  `ContextualRecallMetrics`: evaluates whether **embedding model** in retriever is able to accurately capture and retrieve relevant information based on context of the input. [Documentation and algorithm for ContextualRecall](https://docs.confident-ai.com/docs/metrics-contextual-recall)
+  - `ContextualRelevancyMetric`: evaluates whether the **text chunk size** and **tok-K** of our retriever is able to retrieve information without too many irrelevancies. [Documentation and algorithm for ContextualRelevancy](https://docs.confident-ai.com/docs/metrics-contextual-relevancy).
+
+> [!NOTE]
+  > These three metrics happen to cover all major hyperparameters which would influence the quality of your retrieval context. You should aim to use all three in conjunction for comprehensive evaluation results.  
+
+You want to make sure the retriever is able to retrieve just the right amount of information, in just the right order. Like [Goldilocks and the Three Bears](https://en.wikipedia.org/wiki/Goldilocks_and_the_Three_Bears).
+Here's some boilerplate:
+
+```python
+from deepeval.metrics import (
+    ContextualPrecisionMetric,
+    ContextualRecallMetric,
+    ContextualRelevancyMetric
+)
+
+contextual_precision = ContextualPrecisionMetric()
+contextual_recall = ContextualRecallMetric()
+contextual_relevancy = ContextualRelevancyMetric()
+```
+> [!IMPORTANT]
+> All metrics in DeepEval allow us to:
+  - set passing `threshold`s,
+  - turn on `strict_mode`,
+  - `include_reason`,
+  - use any LLM for evaluation
+
+Now we can define a `LLMTestCase`. Remember the metric is the ruler and the test case is what is actually being measured. 
+
+```python
+from deepeval.test_case import LLMTestCase
+...
+
+test_case = LLMTestCase(
+    input="I'm on an F-1 visa, gow long can I stay in the US after graduation?",
+    actual_output="You can stay up to 30 days after completing your degree.",
+    expected_output="You can stay up to 60 days after completing your degree.",
+    retrieval_context=[
+        """If you are in the U.S. on an F-1 visa, you are allowed to stay for 60 days after completing
+        your degree, unless you have applied for and been approved to participate in OPT."""
+    ]
+)
+```
+> [!CAUTION]
+> You should **NOT** include the entire prompt template as input, but instead just the raw user input. ***This is because the prompt template is an independent variable we're trying to optimize for.*** 
+
+Boilerplate for evaluating retriever by measuring `test_case` using each metrics as a standalone:
+
+```python
+...
+
+contextual_precision.measure(test_case)
+print("Score: ", contextual_precision.score)
+print("Reason: ", contextual_precision.reason)
+
+contextual_recall.measure(test_case)
+print("Score: ", contextual_recall.score)
+print("Reason: ", contextual_recall.reason)
+
+contextual_relevancy.measure(test_case)
+print("Score: ", contextual_relevancy.score)
+print("Reason: ", contextual_relevancy.reason)
+```
+
+Alternatively, in bulk - useful when we have a lot of test cases:
+
+```python
+from deepeval import evaluate
+...
+
+evaluate(
+    test_cases=[test_case],
+    metrics=[contextual_precision, contextual_recall, contextual_relevancy]
+)
+```
+
+## Evaluating Generation
+Two LLM evaluation metrics to evaluate **generic** generations:
+  - `AnswerRelevancyMetric`: evaluates whether **prompt template** in generator is able to instruct LLM to output relevant and helpful outputs based on `retrieval_context`. [Documentation and algorithm for `AnswerRelevancyMetric`](https://docs.confident-ai.com/docs/metrics-answer-relevancy).
+  - `FaithfulnessMetric`: evaluates whether **LLM** used in generator can output information which doesn't hallucinate **AND** does not contradict any factual information presented in `retrieval_context`.    [Documentation and algorithm for FaithfulnessMetric](https://docs.confident-ai.com/docs/metrics-faithfulness).
+
+> [!NOTE]
+  > In reality, the hyperparameters for the generator are definitely not as clear-cut as the hyperparameters in the retriever.  
+
+There is a sidenote that recommends:
+> To evaluate generation on customized criteria, use the `GEval` metric instead, which covers all custom use cases.
+
+Boilerplate:
+
+```python
+from deepeval.metrics import AnswerRelevancyMetric, FaithfulnessMetric
+
+answer_relevancy = AnswerRelevancyMetric()
+faithfulness = FaithfulnessMetric()
+
+# Create a test case (reuse previous example)
+from deepeval.test_case import LLMTestCase
+...
+
+test_case = LLMTestCase(
+    input="I'm on an F-1 visa, gow long can I stay in the US after graduation?",
+    actual_output="You can stay up to 30 days after completing your degree.",
+    expected_output="You can stay up to 60 days after completing your degree.",
+    retrieval_context=[
+        """If you are in the U.S. on an F-1 visa, you are allowed to stay for 60 days after completing
+        your degree, unless you have applied for and been approved to participate in OPT."""
+    ]
+)
+
+# Run individual evaluations:
+...
+
+answer_relevancy.measure(test_case)
+print("Score: ", answer_relevancy.score)
+print("Reason: ", answer_relevancy.reason)
+
+faithfulness.measure(test_case)
+print("Score: ", faithfulness.score)
+print("Reason: ", faithfulness.reason)
+```
+# Or in bulk
+from deepeval import evaluate
+...
+
+evaluate(
+    test_cases=[test_case],
+    metrics=[answer_relevancy, faithfulness]
+)
+
+## Beyond Generic Evaluation
+These RAG metrics are useful but extremely generic. For example, if, for some reason, I wanted my RAG-absed chatbot to answer questions in a particular style or tone of voice, how could I evaluate that?
+
+This is where we call into service DeepEval's `GEval` metric, which is purported to be capable of evaluating LLM outputs on any criteria. 
+
+Boilerplate:
+
+```python
+from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCaseParams
+...
+
+dark_humor = GEval(
+    name="Dark Humor",
+    criteria="Determine how funny the dark humor in the actual output is",
+    evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT],
+)
+
+dark_humor.measure(test_case)
+print("Score: ", dark_humor.score)
+print("Reason: ", dark_humor.reason)
+```
+
+# End-to-End RAG Evaluation
+We can combine retrieval and generation metrics to evaluate a RAG pipeline, end-to-end.
+
+```python
+...
+
+evaluate(
+    test_cases=test_cases,
+    metrics=[
+        contextual_precision,
+        contextual_recall,
+        contextual_relevancy,
+        answer_relevancy,
+        faithfulness,
+        # Optionally include any custom metrics
+        dark_humor
+    ]
+)
+```
+## Unit Testing RAG Systems in CI/CD
+Here's an example with a GitHub Actions and GitHub workflow. Here's a test file `test_rag.py`:
+
+```python
+from deepeval import assert_test
+from deepeval.test_case import LLMTestCase
+from deepeval.metrics import AnswerRelevancyMetric
+
+dataset = EvaluationDataset(test_cases=[...])
+
+@pytest.mark.parametrize(
+    "test_case",
+    dataset,
+)
+def test_rag(test_case: LLMTestCase):
+    # metrics is the list of RAG metrics as shown in previous sections
+    assert_test(test_case, metrics)
+```
+Now use the CLI like so: `deepeval test run`.
+```bash
+deepeval test run test_rag.py
+```
+> [!IMPORTANT]
+> DeepEval provides more capabilities for the CLI evaluation:
+  - [Documentation including parallelization, cachine, error handling, etc.](https://docs.confident-ai.com/docs/evaluation-introduction#evaluating-with-pytest)
+
+Once all metrics are included, include it within our GitHub workflow `.yaml` file:
+
+```yaml
+# filename: .github/workflows/rag-testing.yml
+
+name: RAG Testing
+
+on:
+   push:
+   pull:
+jobs:
+   test:
+       runs-on: ubuntu-latest
+       steps: 
+           # extra seteps to setup and install dependencies
+           # set OPENAI_API_KEY if we choose to use GPT models for evaluation
+      - name: Run deepeval tests 
+        run: poetry run deepeval test run test_rag.py 
+```
+
+Now we have setup a workflow to automatically unit-test RAG application in CI/CD.
+
+Here's another great article for CI/CD RAG evaluation:
+  - [RAG Evaluation: The Definitive Guide to Unit Testing RAG in CI/CD](https://www.confident-ai.com/blog/how-to-evaluate-rag-applications-in-ci-cd-pipelines-with-deepeval).
+
+## Optimizing on Hyperparameters
+In `deepeval` we can associate hyperparameters such as text chunk size, top-K, embedding model, and more, to each test run. 
+
+Add this boilerplate to code in test file to start logging hyperparameters with each test run:
+
+```python
+import deepeval
+...
+
+@deepeval.log_hyperparameters(model="gpt-4", prompt_template="...")
+def custom_parameters():
+    return {
+        "embedding model": "text-embedding-3-large",
+        "chunk size": 1000,
+        "k": 5,
+        "temperature": 0
+    }
+```
+> [!TIP]
+> You can just return an empty dictionary `{}` if you don't have any customer params to log.
 
 # Real-time Evaluations on Confident AI
 There is a free web platform to:
