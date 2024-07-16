@@ -1,7 +1,7 @@
 ---
 title: "A Letter to my Potential Employers"
 date_created: "2024-07-13T22:08:10"
-date: "2024-07-13T23:06:57"
+date: "2024-07-16T11:54:00"
 tags:
   - "evergreen"
 publish: true
@@ -30,4 +30,4 @@ Besides my technical skills, I am a detail-oriented team player who takes great 
 
 I am a creative, fearless, and resourceful technical employee who will add value to any data-driven organization. My Linkedin profile is linked in my homepage. You can contact me via email @ `sushant.h.vema dot gmail dot com`. 
 
-Thank you for taking the time to read this notice. I hope you appreciate what I have to offer the growing knowledge ocean of my website. Have a wonderful day.
+Thank you for taking the time to read this notice. I hope you appreciate what I have to offer within the growing knowledge ocean of my website. Have a wonderful day.

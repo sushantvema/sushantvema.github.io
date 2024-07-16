@@ -3,7 +3,7 @@ title: "Music: the shorthand of emotion"
 description: "A voyage into my identity through the lens of music"
 author: "Sushant Vema"
 date_created: "2024-07-13T21:01:02"
-date_modified: "2024-07-13T21:01:06"
+date: "2024-07-16T14:39:50"
 tags:
   - "evergreen"
   - "seedling"
@@ -28,3 +28,9 @@ Follow my [Spotify account](https://open.spotify.com/user/blubstrikesback?si=131
 
 # What music means to me
 Too much I feel that I have simply become a consumer of music. With the amount of music I listen to daily, I often forget what it is like to be moved. An ex of mine once told me about a phenomenon called [frisson](https://en.wikipedia.org/wiki/Frisson). 
+
+# Artists of Note
+
+## Guitar
+- [Tommy Emmanuel](https://tommyemmanuel.com/bio/)
+- [Erick Turnbull](https://www.youtube.com/@ErickTurnbull/videos)
