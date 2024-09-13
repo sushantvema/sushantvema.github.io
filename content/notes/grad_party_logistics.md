@@ -5,11 +5,9 @@ date: "2024-07-11T18:44:13"
 publish: false
 ---
 # Checklist
-- [] scrape grad photos for Jo @2024-07-13
-- [] put together a video montage using AI
-- [] decide on catering
-- [] decide on special demos to do
-- [] start writing the agenda
+- [] final event flow
+- [] contact people who need follow ups
+- [] contact manthan with a playlist of examples
 
 # Budget ~ $3000
 - Venue ($1170): 
