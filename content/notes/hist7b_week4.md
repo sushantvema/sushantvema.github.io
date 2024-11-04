@@ -90,4 +90,16 @@ Discussion Assignment: Using the material in the readings and films, respond to 
 Two part writing prompt: 1) Explain the American experience during World War I.  2) Identify and explain three ways that American society changed as a result of its involvement in World War I.  You may choose to focus on changes that came during the war and/or after the war ended.
 
 ### Notes with Timestamps
+- 1913: 8000 women march on Pennsylvania avenue to protest for the right to vote. 
+- Mixed reactions from the crowd. Movement had millions of supporters on 1913s. 
+- 65 years before in Seneca Falls, New York. Although it was a progressive town, women were extremely restricted by law and custom. 
+- One state upheld the right of the husband to beat his wife, suggesting that otherwise the harmony of the home would be disrupted. 
+- Elizabeth Stanton. Highly educated and wife of a radical abolitionist. 2 day exposition in the Methodist Chapel. 
+- Some of the most troubling issues to women: divorce, property rights, right to vote. They chose to petition for the right to vote first. 
+- Voting was such a quintessentially male act in 1848. 
+- Abolitionist Frederick Douglass rose in support: This cause it not exclusively a woman cause. 
+- "And when men and women think, the first step of progress is taken". - 7:43. 
+- After one of these assemblies, Scranton met Susan B. Anthony. "When she first saw that stately young Quaker woman, she knew she would shake the foundations of society together." - 8:50
+- "If a girl marries into poverty, she becomes a dull. If she marries into wealth she beomes a doll." - Susan B. Anthony, 9:20. 
+-
 
