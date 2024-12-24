@@ -1,0 +1,223 @@
+Log InRegister
+ Upgrade Storage
+Home Groups Documentation Forums Get Involved
+ 
+start > quick_start_guide
+
+Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources.
+
+Read on for an overview of Zotero's features and capabilities.
+
+The Basics
+How do I install Zotero?
+
+See the installation instructions.
+
+How do I open Zotero?
+
+Zotero can be opened from your operating system's dock or file manager like any other program.
+
+What does Zotero do?
+
+Zotero is, at the most basic level, a reference manager. It is designed to store, manage, and cite bibliographic references, such as books and articles. In Zotero, each of these references constitutes an item. More broadly, Zotero is a powerful tool for collecting and organizing research information and sources.
+
+
+
+
+
+What kind of items are there?
+
+Every item contains different metadata, depending on what type it is. Items can be everything from books, articles, and reports to web pages, artwork, films, letters, manuscripts, sound recordings, bills, cases, or statutes, among many others.
+
+
+
+
+
+What can I do with items?
+
+Items appear in Zotero's center pane. The metadata for that item is shown in the right pane. This includes titles, creators, publishers, dates, page numbers, and any other data needed to cite the item.
+
+
+
+
+
+Organize
+Collections
+
+The left pane includes My Library, which contains all the items in your library. Right-click on My Library or click on the New Collection button () above the left pane to create a new collection, a folder into which items relating to a specific project or topic can be placed. Think of collections like playlists in a music player: items in collections are aliases (or “links”) to a single copy of the item in your library. The same item can belong to many collections at one time.
+
+
+
+
+
+Tags
+
+Items can be assigned tags. Tags are named by the user. An item can be assigned as many tags as is needed. Tags are added or removed with the tag selector at the bottom of the left pane or through the Tags tab of any item in the right-hand pane. Up to 6 tags can be assigned colors. Colored tags are readily visible in the item list and can be quickly added or removed using the number keys on your keyboard.
+
+
+
+
+
+Searches
+
+Quick searches show items whose metadata, tags, or fulltext content match the search terms and are performed from the Zotero toolbar. Clicking the spyglass icon to the left of the search box opens the Advanced Search window, allowing for more complex or narrow searches.
+
+
+
+
+
+Saved Searches
+
+Advanced searches can be saved in the left pane They are similar to collections, but will update with new matching items automatically.
+
+
+
+
+
+Collect
+Attachments
+
+Items can have notes, files, and links attached to them. These attachments appear in the middle pane underneath their parent item. Attachments can be shown or hidden by clicking the arrow next to their parent item.
+
+
+
+
+
+Notes
+
+Rich-text notes can be attached to any item through the Notes tab in the right-hand pane. They can be edited in the right-hand pane or in their own window. Click the New Note button () in the toolbar to create a note without attaching it to an item.
+
+
+
+
+
+Files
+
+Any type of file can be attached to an item. Attach files with the Add Attachment (paperclip) button in the Zotero toolbar, by right-clicking on an existing item, or by drag-and-dropping. Files do not need to be attached to existing items. They can simply be added to your library. Files can also be downloaded automatically when you import items using the Zotero Connector in your browser.
+
+
+
+
+
+Links & Snapshots
+
+Web pages can be attached to any item as a link or a snapshot. A link simply opens the website online. Zotero can also save a snapshot of a web page. A snapshot is a locally stored copy of a web page in the same state as it was when it was saved. Snapshots are available without an internet connection.
+
+
+
+
+
+Capturing Items
+
+With the Zotero Connector for Chrome, Firefox, or Safari, it's simple to create new items from information available on the internet. With the click of a button, Zotero can automatically create an item of the appropriate type and populate the metadata fields, download a full-text PDF if available, and attach useful links (e.g., to the PubMed entry) or Supplemental Data files.
+
+
+
+
+Single or Multiple Captures
+
+If the save icon is a book, article, image, or other single item, clicking on it will add the item to the current collection in Zotero. If the save icon is a folder, the webpage contains multiple items. Clicking it will open a dialog box from which items can be selected and saved to Zotero.
+
+
+
+
+
+Translators
+
+Zotero uses bits of code called translators to recognize information on webpages. There are generic translators which work with many sites and translators written for individual sites. If a site you're using does not have a translator, feel free to request one on the Zotero Forums.
+
+
+
+
+
+Saving a Web Page
+
+If the Zotero Connector does not recognize data on the page, you can still click the save button in the browser toolbar to save the page as a Web Page item with an attached snapshot. While this will save basic metadata (title, URL, access date), you may need to fill in additional metadata from the page by hand.
+
+
+
+
+Add Item by Identifier
+
+Zotero can add items automatically using their an ISBN number, Digital Object Identifier (DOI), or PubMed ID. This is done by clicking the Add Item by Identifier button () in the Zotero toolbar, typing in the ID number, and clicking OK. You can even paste or enter (press Shift+Enter for a larger box) a list of such identifiers at once.
+
+
+
+
+
+Feeds
+
+Subscribe to RSS feeds from your favorite journals or websites to keep up to date with the latest research. Go to the article web page or save items to your library with the click of a button.
+
+
+
+
+
+
+Manually Adding Items
+
+Items can be added manually by clicking the green New Item () button in the Zotero toolbar and selecting the appropriate item type. Metadata can then be added by hand in the right-hand pane. While you should generally not add items manually, it can be useful for adding primary documents that aren't available online.
+
+
+
+
+
+Cite
+Citing Items
+
+Zotero uses Citation Style Language (CSL) to properly format citations in many different bibliographic styles. Zotero supports all the major styles (Chicago, MLA, APA, Vancouver, etc.) as well as the specific styles for over 8,000 journals and publishers.
+
+
+
+
+
+Word Processor Integration
+
+Zotero's Word, LibreOffice, and Google Docs plugins allow users to insert citations directly from their word processing software. This makes citing multiple pages or sources or otherwise customizing citations a breeze. In-text citations, footnotes and endnotes are all supported. With community-developed plugins, Zotero can also be used with LaTeX, Scrivener, and numerous other writing programs.
+
+
+
+
+
+Automatic Bibliographies
+
+Using the word processor plugins makes it possible to automatically generate a bibliography from the items cited and to switch citation styles for the entire document with the click of a button.
+
+
+
+
+
+Manual Bibliographies
+
+Zotero can also insert citations and bibliographies into any text field or program. Simply drag-and-drop items, use Quick Copy to send citations to the clipboard, or export them directly to a file.
+
+
+
+
+
+Collaborate
+Syncing
+
+Use Zotero on multiple computers with Zotero syncing. Library items and notes are synced through the Zotero servers (unlimited storage), while attachment syncing can use the Zotero servers or your own WebDAV service to sync files such as PDFs, images, or audio/video.
+
+
+
+
+
+Zotero Servers
+
+Items synced to the Zotero servers can be accessed online through your zotero.org account. Share your library with others or create a custom C.V. from selected items.
+
+Make copies of your research readily available on zotero.org for readers, the public, and other researchers using My Publications.
+
+
+
+
+
+Groups
+
+Zotero users can create collaborative or interest groups. Shared group libraries make it possible to collaboratively manage research sources and materials, both online and through the Zotero client. Zotero.org can be the hub of all your project group's research, communication and organization.
+
+Blog Forums Developers Support Privacy Get Involved Jobs About
+
+Zotero is a project of the Corporation for Digital Scholarship, a nonprofit organization dedicated to the development of software and services for researchers and cultural heritage institutions, and is developed by a global community.
