@@ -50,3 +50,20 @@ Source: [stackoverflow thread](https://stackoverflow.com/questions/30590083/git-
      ```bash
      git push origin -u new-name
      ```
+
+## Generally Helpful Utilities
+
+`git diff` is a great API to
+
+> _Show changes between commits, commit and working tree, **etc**_
+
+The etc part is where it really shines! I use it frequently as a Lazygit custom command to do change management on my work.
+Here's an [article by GitLab reviewing Git version control best practices for developers](https://about.gitlab.com/topics/version-control/version-control-best-practices/). GitLab is "the most comprehensive DevSecOps platform" started in 2011.
+GitLab is slightly less popular than GitHub but seems to be more popular in enterprise. I plan to do a deeper article sometime about different git-based cloud platform tooling options.
+
+- GH enterprise: codespaces
+- some enterprises "mirror" repositories between gitlab and GH
+
+links:
+
+- [stack overflow: Git diff --stat explanation](https://stackoverflow.com/questions/7024848/git-diff-stat-explanation)
