@@ -3,6 +3,7 @@ title: "Personal Projects"
 tags:
   - "inbox"
 publish: true
+date: 2024-12-24T16:46:45
 ---
 
 # Projects
@@ -28,8 +29,7 @@ publish: true
 
 ## Personal Projects at Home
 
-- Make time. Set boundaries. 
+- Make time. Set boundaries.
 - Get lifeguard certification
-- Register for the classes I wanted at Las Positas College this summer. 
+- Register for the classes I wanted at Las Positas College this summer.
 - Fix my bike
-

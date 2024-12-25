@@ -3,19 +3,42 @@ title: "All About Coffee and How I Make It"
 description: "Notes about coffee."
 author: "Sushant Vema"
 date_created: "2024-07-11T07:31:56"
-date: "2024-07-16T10:08:45"
+date: 2024-12-24T16:47:45
 tags:
   - "coffee"
 publish: true
 ---
 
 # Espresso
+
 > Single shots tend to have between 45 and 75mg of caffeine each. The average is 63 mg. If you're going deluxe and ordering a double, you can expect a caffeine boost of between 70 and 120mg per double shot. – [How much caffeine is in a double espresso? - Two Chimps Roasters](https://twochimpscoffee.com/blogs/how-much-caffeine-in-double-espresso/#:~:text=Single%20shots%20tend%20to%20have,and%20120mg%20per%20double%20shot.)
 
+## Mokapot
+
+A family friend of mine gave me a Bialetti 3-cup Mokapot Express as a graduation gift.
+The mokapot is the best and cheapest way to make darn good espresso. Here's what you need to know:
+
+- 14 grams of coffee required
+  - I originally used ground Indian style filter coffee (Coorg brand). It was a fine-to-medium grind size. With chicory in it
+  - I recently bought 3 types of coffee beans from Happy Mug which arrived on 2024-12-20. For these, I grind 14g using my Chestnut C3 grinder at ~9-10 clicks
+- water should be piping hot off the kettle
+- take a thin fork or something like a WDT tool and mix around the ground to mitigate clumps
+
 # V60 Pourover
+
+## 2024-12-24 : Discovered the 4/6 Method
+
+Source: [Philocoffea: How to Make Coffee Using the 4:6 Brewing Method](https://en.philocoffea.com/blogs/blog/coffee-brewing-method)
+
+- The core idea is to maximize the extraction yield of the water and get a balanced cup every time
+- create a pattern that allows you to keep the grind size and temperature more or less constant and mess around with different extraction profiles
+
+## Archive
+
 Dosage:
-  - 30g coffee (Fine-medium Grind size)
-  - 500mL soft or bottled water (97°C / 206.6°F)
+
+- 30g coffee (Fine-medium Grind size)
+- 500mL soft or bottled water (97°C / 206.6°F)
 
 Instructions:
 
@@ -33,21 +56,23 @@ Instructions:
 
 Source: [James Hoffman- V60 Ambassador Q&A and V60 Recipe](https://www.hario-europe.com/blogs/hario-community/v60-ambassadors-james-hoffmann)
 2024-07-12:
-  - 14 clicks after center
-  - hot water paper flash
-  - 20 grams is a full container
-  - 19.3 measured afterwards
-  - 300 ml of water needed
-  - bloom with 40ml water, good swirl
-  - let it rest for 45 seconds
-  - 180 grams pour with agitation in 30 seconds
-  - pour the rest slowly
-  - stir the sides with a spooon
+
+- 14 clicks after center
+- hot water paper flash
+- 20 grams is a full container
+- 19.3 measured afterwards
+- 300 ml of water needed
+- bloom with 40ml water, good swirl
+- let it rest for 45 seconds
+- 180 grams pour with agitation in 30 seconds
+- pour the rest slowly
+- stir the sides with a spooon
 
 2024-07-16:
-  - 14 clicks for my [Timemore Chestnut C3 manual grinder](https://www.timemore.com/products/timemore-chestnut-c3-esp-manual-coffee-grinder-1) (which I got for 47 bucks on AliExpress)
-  - Costco dark roast blend from Pacific Northwest (don't remember the name)
-  - 17.5 grams of coffee
-  - 275ml water
-  - 2m45s total drawdown time
-  - very pleasant brew. should be able to get another decent extraction in the afternoon. 
+
+- 14 clicks for my [Timemore Chestnut C3 manual grinder](https://www.timemore.com/products/timemore-chestnut-c3-esp-manual-coffee-grinder-1) (which I got for 47 bucks on AliExpress)
+- Costco dark roast blend from Pacific Northwest (don't remember the name)
+- 17.5 grams of coffee
+- 275ml water
+- 2m45s total drawdown time
+- very pleasant brew. should be able to get another decent extraction in the afternoon.
