@@ -1,7 +1,7 @@
 ---
 title: "Big Book of Useful Git Operations"
 date_created: 2024-12-24T14:08:15
-date: 2024-12-24T14:08:19
+date: 2024-12-25T11:59:48
 publish: true
 tags:
   - technical
@@ -50,6 +50,20 @@ Source: [stackoverflow thread](https://stackoverflow.com/questions/30590083/git-
      ```bash
      git push origin -u new-name
      ```
+
+## Staging Area / Pre-commit management
+
+`git reset` is an API to reset the current HEAD of the branch to a specified state.
+
+Oftentimes I have unstaged changes in my working directory which I want to nuke because they are no longer relevant to the project. That's why it's a good habit to develop in feature branches and pull changes from the master branch every day, keeping your branch fresh. It's easy to add too much content to a single PR. Use discretion.
+
+To revert to a previous commit, use
+
+- `git reset --hard HEAD`
+
+links:
+
+- [git reset stack overflow thread](https://stackoverflow.com/questions/9529078/how-do-i-use-git-reset-hard-head-to-revert-to-a-previous-commit)
 
 ## Generally Helpful Utilities
 
