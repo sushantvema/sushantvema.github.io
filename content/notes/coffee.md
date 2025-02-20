@@ -3,7 +3,7 @@ title: "All About Coffee and How I Make It"
 description: "Notes about coffee."
 author: "Sushant Vema"
 date_created: "2024-07-11T07:31:56"
-date: 2024-12-24T16:47:45
+date: 2024-12-30T11:16:36
 tags:
   - "coffee"
 publish: true
@@ -25,6 +25,12 @@ The mokapot is the best and cheapest way to make darn good espresso. Here's what
 - take a thin fork or something like a WDT tool and mix around the ground to mitigate clumps
 
 # V60 Pourover
+
+## Favorite Brews
+
+2024-12-30: surprisingly, one of my favorite v60 brews thus far has been [Happy Mug's Christmas Yeti Espresso Blend](https://happymugcoffee.com/products/christmas-espresso). I ground it using my Chestnut C3 at 15 clicks. I figured since the sumatra beans are rather pungent/spicy, having a coarser grind will be beneficial for extracting the sweeter notes. And boy was it great!
+I did 15g coffee, and 275g water. 50g bloom for ~30 seconds, then 50g of water at a time with 15-20s rest between each pour until 200g. Then 200->275g water poured.
+Review: Very pleasant dark brew. Slightly spicy and savory notes. Great with a cup of warm-spiced oatmeal in the morning.
 
 ## 2024-12-24 : Discovered the 4/6 Method
 
