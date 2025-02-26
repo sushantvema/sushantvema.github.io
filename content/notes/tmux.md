@@ -21,6 +21,8 @@ author: Sushant Vema
 
 ## Bindings and Practical Use
 
+- Swap windows: `prefix + swap-window -t 1`
+
 ## Ecosystem
 
 - [tmuxp - Session manager for tmux, built on libtmux](uhttps://github.com/tmux-python/tmuxp)
