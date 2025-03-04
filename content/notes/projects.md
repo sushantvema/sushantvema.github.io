@@ -3,21 +3,37 @@ title: "Personal Projects"
 tags:
   - "inbox"
 publish: true
-date: 2025-02-24T19:42:14
+date_created: 2025-02-24T19:42:14
+date: 2025-03-03T10:18:03
 ---
 
 ## Personal Technical Projects
 
-## nvim Markdown Workflow
+### nvim
 
-- Create a script to apply autoformatting to all my markdown documents based on
+#### Markdown Workflow
+
+- TODO: Disable [Marksman](https://github.com/artempyanykh/marksman/tree/mainhttps://github.com/artempyanykh/marksman/tree/main)
+- TODO: Create a script or nvim autocmd to apply autoformatting to all my
+  markdown documents based on
   CommonMark rules
+- TODO: In insert mode, automatically create a new bullet point in-line when
+  carriage returning from a previous list line
+
+#### Pickers
+
+- TODO: Snacks.lua picker enable wrapping
 
 ## Quartz Personal Website
 
 - Image support
 - Implement tag page
 - Explore new plugins
+- New plugin for parsing `date_created` in the frontmatter?
+
+## Learning New Languages
+
+- GoLang
 
 ### Unorganized
 
