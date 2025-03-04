@@ -46,6 +46,10 @@ One way:
 
 ## Mobility
 
+### Traffic
+
+- Real-time Oahu traffic monitoring: [GoAkamai](http://goakamai.org/)
+
 ### TheBus
 
 > "TheBus is Oahu’s public bus system. You can catch a ride for $3.00 to pretty
