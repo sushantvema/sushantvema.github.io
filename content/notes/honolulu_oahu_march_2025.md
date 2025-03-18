@@ -156,40 +156,80 @@ economical.
 
 ### Day 1 - Friday March 21st - Arrival at 11 AM
 
-      m
-
-- Take the 20 bus from the airport to Waikiki. It will take about 1 hour.
+- Pick up the rental car
+- Lunch on the way to Ala Moana
+- Groceries at Walmart / Costco
+- Check in to the Airbnb at 4 PM
 - Either early checkin or some other activity
 - lunch
-- Evening go to Waikiki beach for the sunset at 6:30
-- Grab banana soft serve ice cream from Banan
-- "If you arrive on a Friday, or have a Friday in Oahu, try finding a good spot
-  to watch the fireworks that take place at the Hilton Hawaiian Village Waikīkī
-  Beach Resort at 8 PM."
+- Evening go to Kahanamoku beach for the sunset at 6:30, see the fireworks at
+  7:45.
+- Dinner
 
-### Day 2 - Saturday March 22nd - Kaka'ako Farmers Market
+### Day 2 - Saturday March 22nd - KCC Farmers Market, Diamond Head, Kaimuki, US-72 Drive
 
-- Farmer's market from 8 AM - 12 PM. Heard it's extremely touristy, maybe will
-  avoid.
-  - Alternatives: Manoa Marketplace, Chinatown
-- Take the 42/20 bus from Waikiki to there (Ala Moana). 30 minutes one way.
-- Diamond Head State Monument + Hike. 30 minutes by bus.
-- Afterwards go to Kaimuki neighborhood for brunch.
+- Breakfast in AirBNB
+- Stop at Leonard's Bakery for masaladas?
+- KCC Farmer's market from 7:30am - 11 am. Will go around 9 probably.
+- Diamond Head State Monument + Hike. Finish by 2 PM
+  - Permit required? Closeby streetside parking?
+- Afterwards go to Kaimuki neighborhood for lunch
+- Drive to China Cove
+- Koko Head?
+- Evening Waikiki beach sunset
+  - Grab banana soft serve ice cream from Banan
+- Dinner at home
 
-### Day 3 - Sunday March 23rd - Koko Head + China Walls
+### Day 3 - Sunday March 23rd - Morning with Maya's Family, Evening ISKCON Temple, Flex
 
-### Day 4 - Monday March 24th - Lanika Beach
+- Breakfast in AirBNB
+- Lunch with Maya's family?
+- Visit ISCKON temple in the evening for Sunday dinner program
 
-### Day 5 - Tuesday March 25th - Byodo'in Temple. Ho'omaluhia Botanical Garden
+### Day 4 - Monday March 24th - Nu'uanu Pali Lookout, Lanikai Beach, US-61 Drive
 
-### Day 6 - Wednesday March 26th - Kuliouou Ridge Trail - Tane Vegan Izakaya
+- Breakfast in AirBNB
+- Drive to Nu'uanu Pali Lookout
+- Afternoon at Lanikai beach
+  - Kayaking optional
 
-### Day 7 - Thursday March 27th - International Marketplacve
+### Day 5 - Tuesday March 25th - Byodo'in Temple. Ho'omaluhia Botanical Garden, H3/US-83 Drive
+
+- Breakfast in AirBNB
+- Ho'omaluhia Botanical Gardens
+- Byodo'in temple
+- Lunch at Nene Goose Bakery
+- Kualoa Ranch?
+- Evening Flex
+
+### Day 6 - Wednesday March 26th - Downtown HNL, Iolani, Pearl Harbor, Swap meet
+
+- Aloha Swap Meet (closes at 3)
+  - Good fruit, cheap souvenirs
+- Iolani Palace tour
+- Kamehameha Statue
+- Lunch somewhere
+- Pearl Harbor
+- USS Arizona
+- Evening flex
+
+### Day 7 - Thursday March 27th - North Shore, H2 Drive
+
+- Green World Coffee Farm
+  - Free tours, sampling
+- Waimea Valley + Falls? Questionable if it's worth the $25/head
+- Shark's Cove (Haleiwa)
+- Turtle Beach
+- Kahuku Sugar Mill
+- Sunset somewhere
+- Evening flex
 
 ### Day 8 - Friday March 28th - Departure
 
 - Breakfast at Alo Cafe in Waikiki
-- One hour bus to HNL
+- Checkout of AirBNB
+- Return rental car
+- Flight at 12 PM
 
 ## Resources
 

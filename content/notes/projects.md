@@ -4,7 +4,7 @@ tags:
   - "inbox"
 publish: true
 date_created: 2025-02-24T19:42:14
-date: 2025-03-03T10:18:03
+date: 2025-03-16T11:16:58
 ---
 
 ## Personal Technical Projects
@@ -23,6 +23,9 @@ date: 2025-03-03T10:18:03
 #### Pickers
 
 - TODO: Snacks.lua picker enable wrapping
+- TODO: Enable leader ff to search dotfiles as well and dot directories
+
+#### Beancount LSP
 
 ## Quartz Personal Website
 
