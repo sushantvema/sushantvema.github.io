@@ -173,9 +173,12 @@ economical.
 - KCC Farmer's market from 7:30am - 11 am. Will go around 9 probably.
 - Diamond Head State Monument + Hike. Finish by 2 PM
   - Permit required? Closeby streetside parking?
+  - Closed for renovations?
+  - Check out Makapu Lighthouse Trail.
 - Afterwards go to Kaimuki neighborhood for lunch
 - Drive to China Cove
 - Koko Head?
+  - pretyt rough, scratch it out.
 - Evening Waikiki beach sunset
   - Grab banana soft serve ice cream from Banan
 - Dinner at home
@@ -184,6 +187,8 @@ economical.
 
 - Breakfast in AirBNB
 - Lunch with Maya's family?
+  - brunch at 10-10:30
+  - drives in honolulu. Punchbowl memorial. 2 oclocks.
 - Visit ISCKON temple in the evening for Sunday dinner program
 
 ### Day 4 - Monday March 24th - Nu'uanu Pali Lookout, Lanikai Beach, US-61 Drive
@@ -192,6 +197,7 @@ economical.
 - Drive to Nu'uanu Pali Lookout
 - Afternoon at Lanikai beach
   - Kayaking optional
+  - Earlier reservations for kayaking.
 
 ### Day 5 - Tuesday March 25th - Byodo'in Temple. Ho'omaluhia Botanical Garden, H3/US-83 Drive
 
@@ -200,24 +206,29 @@ economical.
 - Byodo'in temple
 - Lunch at Nene Goose Bakery
 - Kualoa Ranch?
+  - paid attraction.
+- Kualoa beach park, chinaman's hat.
+- Kahana bay.
 - Evening Flex
 
 ### Day 6 - Wednesday March 26th - Downtown HNL, Iolani, Pearl Harbor, Swap meet
 
+- Pearl Harbor
 - Aloha Swap Meet (closes at 3)
   - Good fruit, cheap souvenirs
+  - Go early it gets really hot
 - Iolani Palace tour
+- Bishop Museum?
 - Kamehameha Statue
 - Lunch somewhere
-- Pearl Harbor
 - USS Arizona
 - Evening flex
 
 ### Day 7 - Thursday March 27th - North Shore, H2 Drive
 
+- Worth stopping at Dole plantation, oyster? Restroom break.
 - Green World Coffee Farm
   - Free tours, sampling
-- Waimea Valley + Falls? Questionable if it's worth the $25/head
 - Shark's Cove (Haleiwa)
 - Turtle Beach
 - Kahuku Sugar Mill
