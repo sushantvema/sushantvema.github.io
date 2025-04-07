@@ -4,7 +4,7 @@ tags:
   - "inbox"
 publish: true
 date_created: 2025-02-24T19:42:14
-date: 2025-03-16T11:16:58
+date: 2025-04-05T20:03:50
 ---
 
 ## Personal Technical Projects
@@ -13,12 +13,17 @@ date: 2025-03-16T11:16:58
 
 #### Markdown Workflow
 
-- TODO: Disable [Marksman](https://github.com/artempyanykh/marksman/tree/mainhttps://github.com/artempyanykh/marksman/tree/main)
+- DONE: Disable [Marksman](https://github.com/artempyanykh/marksman/tree/mainhttps://github.com/artempyanykh/marksman/tree/main)
+  - 2025-04-05: Begin. Seems to have been as simple as `:MasonUninstall`. I
+    realized I needed to keep the other lazyvim markdown extras, so I left that in
+    lazyvim.json in my dotfiles. Then I did the Mason Uninstall along with LSP
+    restart.
 - TODO: Create a script or nvim autocmd to apply autoformatting to all my
   markdown documents based on
   CommonMark rules
 - TODO: In insert mode, automatically create a new bullet point in-line when
   carriage returning from a previous list line
+- TODO: folding solution for markdown?
 
 #### Pickers
 
