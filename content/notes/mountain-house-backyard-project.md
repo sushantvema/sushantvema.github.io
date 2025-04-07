@@ -1,0 +1,14 @@
+---
+title: Mountain House Landscaping Project
+description: Project management, organization, and delivery for MH landscaping
+date_created: 2025-04-05T19:49:52
+date: 2025-04-05T19:49:54
+publish: true
+author: Sushant Vema
+tags:
+  - project
+---
+
+## Internal Documentation Links
+
+- [[sketchup|My SketchUp Learnings]]
