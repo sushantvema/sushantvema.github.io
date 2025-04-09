@@ -32,6 +32,11 @@ date: 2025-04-05T20:03:50
 
 #### Beancount LSP
 
+### CLI Tools for Productivity
+
+- TODO: Jira CLI
+- TODO: CLI for browsing aliases
+
 ## Quartz Personal Website
 
 - Image support
@@ -42,6 +47,10 @@ date: 2025-04-05T20:03:50
 ## Learning New Languages
 
 - GoLang
+
+## MacOS QOL
+
+- TODO: toggle off special characters with alt prefix
 
 ### Unorganized
 
