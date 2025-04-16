@@ -32,10 +32,19 @@ date: 2025-04-05T20:03:50
 
 #### Beancount LSP
 
+### Tmux / State Management / Project Management
+
+- TODO: tmux resurrect for persisting tmux sessions
+  - See this [LinkedIn Post](https://www.linkedin.com/pulse/save-tmux-sections-automatically-zhenguo-zhang-nbz5c/)
+
 ### CLI Tools for Productivity
 
 - TODO: Jira CLI
 - TODO: CLI for browsing aliases
+
+### Sysadmin Tools
+
+- TODO: Set up k9s TUI
 
 ## Quartz Personal Website
 
