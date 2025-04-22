@@ -8,3 +8,5 @@ tags:
 ---
 
 Aider allows you to use LLMs to edit code within a git repository.
+
+Most useful in-chat commands:
