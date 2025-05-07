@@ -13,9 +13,12 @@ publish: true
 
 ### Databricks CI/CD: Intro to Databricks Asset Bundles (DAB's)
 
+Last modified by Sushant: 2025-05-07
+
 Resources:
 
-- [YouTube Link - Dustin Vannoy](https://www.youtube.com/watch?v=uG0dTF5mmvc)
+- [YouTube Link - Dustin Vannoy - Oct 4 2023](https://www.youtube.com/watch?v=uG0dTF5mmvc)
+- [Code Examples](https://github.com/datakickstart/datakickstart_dabs)
 
 Video Description:
 
@@ -152,8 +155,88 @@ Notes:
   - Added example GitHub Actions yaml's from Data + AI Summit 2023 GitHub repo
     to `.github/workflows`
   - For example in the `dev.yml` action, he has specified a workflow like: When
-    a pull request is opened or synchronized to `main`, certain steps will be
-    run. In future there will be a unit test running locally step, will be
-    implemented in future. Then you can have a `deploy` and a `pipeline_update` job sequentially. Uses `DATABRICKS_TOKEN` and `DATABRICKS_BUNDLE_ENV` as environment variables.
+    a pull request is opened or synchronized to `main`, certain steps will be run.
+    In future there will be a unit test running locally step, will be implemented
+    in future. Then you can have a `deploy` and a `pipeline_update` job
+    sequentially. Uses `DATABRICKS_TOKEN` and `DATABRICKS_BUNDLE_ENV` as
+    environment variables.
   - For the `staging.yml` action, the trigger is when a pull request is pushed
     to main.
+
+### Databricks Asset Bundles: Advanced Examples
+
+Last modified by Sushant: 2025-05-07
+
+Resources:
+
+- [YouTube Link - Dustin Vannoy - June 25 2024](https://www.youtube.com/watch?v=ZuQzIbRoFC4)
+- [Dustin's Blog Post with Examples](https://dustinvannoy.com/2023/10/03/databricks-ci-cd-intro-to-asset-bundles-dabs/)
+
+Video Description:
+
+- > "Databricks Asset Bundles is now GA (Generally Available). As more
+  > Databricks users start to rely on Databricks Asset Bundles (DABs) for their
+  > development and deployment workflows, let's look at some advanced patterns
+  > people have been asking for examples to help them get started."
+
+My notes:
+
+- DAB's are now in GA (Generally Available). Approved for production for all
+  customers from DBX perspective
+- Databricks Asset Bundles are a method for storing source code and jobs and
+  workflows together in version control and deploying them with the Databricks CLI
+- Monorepo project setup demo:
+  - One repository with multiple projects in the same repository. Separate
+    deploy pipeline for each one. Rather than have a `databricks.yml` defined at
+    the top level of the monorepo, there will be one in each one of the
+    sub-projects.
+  - If you want to deploy all projects together, you could one single bundle at
+    the root level - will be searching for all artifacts together as one unit
+- Deploy and view in UI:
+  - When you're cd'ed in the project of choice, run `databricks bundle deploy`. Can run `databricks bundle validate` before.
+  - In development the deployed workflows will be prefixed with `[dev USERNAME]`
+  - The task source code paths will be pointing to paths lining up with bundle
+    target
+  - There will be a notification that the job is deployed via DAB's (`Connected
+to Databricks Asset Bundles`). Prevents changing job parameters etc. Points to
+    which git repostory from which branch it was deployed from. Can see all of the
+    settings, but immutable.
+  - If you really need to make temporary changes without re-deploying from local
+    environemnt, you can `Disconnect from source` after accepting a warning that
+    this is an anti-pattern
+- Config re-use (YAML anchor):
+  - Examples of doing some unit testing from within the `complex_project` in his
+    code examples, will be covered in future video
+  - Different `databricks.yml`. Added some variables under the `variables`
+    header. Example includes `cluster_spark_version` and `cluster_node_type`
+  - Start with `jobs_group1.yml` which shows examples of sharing variables
+    defined in the project bundle
+  - Created a "YAML Anchor" under a `definitions` header
+  - `job_clusters: &mycluster` and `tags_configuration: &tags_configuration`
+  - In the `resources` header when you are definining individual jobs, you can
+    specify `job_clusters: *mycluster` via the anchor definition
+- Shared Python Package (Wheel)
+  - in `datakikstart_shared_lib_job.yml`, you can specify a python wheel already
+    in the workspace as `whl: PATH.whl`
+  - in `python_wheel_upload.sh` Dustin has a simple script to build the wheel,
+    create a workspace directory via DBX CLI, and import the built wheel into the
+    workspace from local environment
+- Serverless compute:
+  - Can create a serverless compute environment for the job/task definition in
+    the resource
+- Modify in UI:
+  - Can modify/have a workflow in the UI, then more or less copy paste the YAML
+    into a bundle. Might have to toggle off some settings / remove some prefixes
+- GitHub integration:
+  - You can specify source code to come from an external github repository
+    instead of the Workspace, and specify a `git_source` subheader for each job in
+    the bundle
+- MLOps:
+  - Follow this DAB template: [databricks/mlops-stacks](https://github.com/databricks/mlops-stacks)
+- Comments section of the video has some good points brought up
+
+### TODO future: Databricks CI/CD: Azure DevOps Pipeline + DABs
+
+### 7 Best Practices for Development and CICD on Databricks
+
+### Developer Best Practices on Databricks: Git, Tests, and Automated Deployment
