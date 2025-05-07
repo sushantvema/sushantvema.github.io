@@ -239,4 +239,61 @@ to Databricks Asset Bundles`). Prevents changing job parameters etc. Points to
 
 ### 7 Best Practices for Development and CICD on Databricks
 
+Resources:
+
+- [YouTube - 7 Best Practices for Development and CICD on Databricks - Dec 20 2024](https://www.youtube.com/watch?v=IWS2AzkTKl0)
+
+Video Description:
+
+- > "In this video I share why developer experience and best practices are
+  > important and why I think Databricks offers the best developer experience for a
+  > data platform. I'll cover high level developer lifecycle and 7 ways to improve
+  > your team's development process with a goal of better quality and reliability."
+
+My Notes:
+
+- He needed to setup up developer environments and deployment standardization
+  for ~5 team members
+- [Databricks Connect](https://docs.databricks.com/aws/en/dev-tools/databricks-connect/python) was around for scripting for local or workspace.
+- Tried to implement these approaches in other platforms like Snowflake etc.
+- Decided he wanted to work exclusively with Databricks for a while.
+  Transitioned to Solutions Architect at Databricks.
+- For teams who don't feel like they have the best dev ex or practices right
+  now, tips:
+  - Slides from Kimberly Mahoney
+  - Planning -> Development -> Does it Work? -> Release
+  - "Does it work?" is a feedback loop, but also product expectations is a
+    feedback loop
+  - Use version control
+  - Run automated code tests. Pyspark in notebooks, sql code (less mature),
+    testing after build and after changes.
+  - Deploying code and jobs to separate isolated environments.
+  - Run automated system test (health check)
+  - Run data quality tests
+  - Automate data schema deployments
+  - Automated rollback on failure
+
 ### Developer Best Practices on Databricks: Git, Tests, and Automated Deployment
+
+Resources:
+
+- [YouTube - Dustin Vannoy - Jan 6 2025](https://www.youtube.com/watch?v=MolLJRD8kgM)
+
+Video Description:
+
+- > "Data engineers and data scientists benefit from using best practices
+  > learned from years of software development. This video walks through 3 of the
+  > most important practices to build quality analytics solutions. It is meant to be
+  > an overview of what following these practices looks like for a Databricks
+  > developer.
+  > This video covers:
+  >
+  > - Version control basics and demo of Git integration with Databricks workspace
+  > - Automated tests with pytest for unit testing and Databricks Workflows for
+  >   integration testing
+  > - CI/CD including running tests prior to deployment with GitHub Actions"
+
+My Notes:
+
+- Basic intro to version control (GitHub) and feature branching.
+- Basic demonstration of mounting a git provider repo
