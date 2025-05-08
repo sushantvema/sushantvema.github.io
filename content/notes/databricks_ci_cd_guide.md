@@ -297,3 +297,33 @@ My Notes:
 
 - Basic intro to version control (GitHub) and feature branching.
 - Basic demonstration of mounting a git provider repo
+- Unit Tests + Integration Tests:
+  - The test pyramid.
+    - Unit tests should be fast and inexpensive. They should test single
+      functions
+    - Integration tests test one step in pipeline. Slightly slower and more
+      expensive.
+    - End-to-end / system tests: Test a full pipeline from source to target.
+      These might run in staging before we get to production
+  - "A lot of the times, what we'll do to better structure our code to make
+    testing easier is we will want to build reusable functions in pyspark and
+    import those into python files or notebooks". Modularity
+  - Walks through example of running unit tests with feedback on VScode.
+    Organized in a tests directory. Uses Databricks connect. Runs majority of this
+    code against a databricks cluster or serverless compute.
+  - When he needs to test spark, use Databricks connect. This is recommended so
+    that you reduce the number of inconsistencies between spark environments
+    in local vs databricks workspace
+  - His tests/ directory has one more layer for delineating integrations and
+    unit tests
+  - `DatabricksSession.builder.getOrCreate()` -> pytest fixture
+  - Common pattern is to use the fixture spark session via databricks connect,
+    create a dataframe via list of lists. Build up an expected dataframe
+  - Dataframe comparisons - instead of pyspark.testing.utils can use
+    [MrPowers/chispa](https://github.com/MrPowers/chispa) which has some really
+    nice capabilities
+  - Logical difference between unit tests and integration tests can be a bit
+    blurry in this case
+  - From the databricks workspace there is no built-in pyspark runner like there
+    is with VSCode. So, build a testing notebook
+  - todo: continue
