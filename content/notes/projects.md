@@ -4,7 +4,7 @@ tags:
   - "inbox"
 publish: true
 date_created: 2025-02-24T19:42:14
-date: 2025-04-05T20:03:50
+date: 2025-05-07T21:58:58
 ---
 
 ## Personal Technical Projects
@@ -36,6 +36,8 @@ date: 2025-04-05T20:03:50
 
 - TODO: tmux resurrect for persisting tmux sessions
   - See this [LinkedIn Post](https://www.linkedin.com/pulse/save-tmux-sections-automatically-zhenguo-zhang-nbz5c/)
+- TODO: Add datetime to starship command prompt to 'measure' long running
+  processes
 
 ### CLI Tools for Productivity
 
