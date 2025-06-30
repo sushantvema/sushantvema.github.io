@@ -98,6 +98,13 @@ Workflow:
 - When complete and tested, move the code and required files to Databricks
   workspace
 
+> [!NOTE]
+> I've discovered a few quirks with Developing databricks apps:
+>
+> 1. The sync utility is not reliable with major refactors
+> 2. You have to manually add requirements.txt
+> 3. They seem to use python 3.11.0 instead of 3.11.11 for some reason
+
 ### [Configure Databricks app execution with app.yaml](https://docs.databricks.com/aws/en/dev-tools/databricks-apps/app-runtime)
 
 By default, Databricks runs the app using the command `app.py`. If the
