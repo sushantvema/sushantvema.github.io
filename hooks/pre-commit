@@ -1,0 +1,68 @@
+#!/bin/bash
+# pre-commit hook
+# Auto-unstages and gitignores markdown files without 'publish: true'
+#
+# Installation:
+#   cp hooks/pre-commit .git/hooks/pre-commit
+#   chmod +x .git/hooks/pre-commit
+#
+# To bypass (emergency): git commit --no-verify
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
+
+# Check if a file should be published
+should_publish() {
+    local file="$1"
+
+    # Extract frontmatter (content between first two ---)
+    local frontmatter
+    frontmatter=$(awk '/^---$/{p++} p==1{print} p==2{exit}' "$file" 2>/dev/null)
+
+    # Check if publish: true exists in frontmatter
+    if echo "$frontmatter" | grep -qE '^publish:\s*true\s*$'; then
+        return 0  # Should publish
+    else
+        return 1  # Should not publish
+    fi
+}
+
+# Get staged markdown files in content/
+staged_files=$(git diff --cached --name-only --diff-filter=ACM | grep '^content/.*\.md$' || true)
+
+if [ -z "$staged_files" ]; then
+    exit 0
+fi
+
+unpublished_files=""
+
+while IFS= read -r file; do
+    if [ -f "$file" ] && ! should_publish "$file"; then
+        unpublished_files="$unpublished_files$file"$'\n'
+    fi
+done <<< "$staged_files"
+
+if [ -n "$unpublished_files" ]; then
+    echo "Detected unpublished files (no 'publish: true'):"
+    echo "$unpublished_files"
+
+    # Unstage each unpublished file
+    while IFS= read -r file; do
+        if [ -n "$file" ]; then
+            echo "  Unstaging: $file"
+            git reset HEAD "$file" >/dev/null 2>&1
+        fi
+    done <<< "$unpublished_files"
+
+    # Update .gitignore
+    if [ -x "$REPO_ROOT/update-gitignore.sh" ]; then
+        echo "Updating .gitignore..."
+        "$REPO_ROOT/update-gitignore.sh" --apply >/dev/null 2>&1
+    fi
+
+    echo ""
+    echo "These files were auto-unstaged and added to .gitignore."
+    echo "Continuing with commit..."
+    echo ""
+fi
+
+exit 0
