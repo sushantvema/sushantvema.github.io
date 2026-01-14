@@ -58,10 +58,10 @@ echo "$tracked_unpublished" | while read -r file; do
 done
 
 echo ""
-echo "Updating .gitignore..."
+echo "Updating .git/info/exclude..."
 ./update-gitignore.sh --apply
 
 echo ""
 echo "Done! Changes staged. To complete, run:"
-echo "  git commit -m \"Unpublish files without publish: true\""
+echo "  npx quartz sync"
 echo ""
