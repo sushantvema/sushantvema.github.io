@@ -12,7 +12,11 @@
 #   ./purge-unpublished-from-history.sh --apply   # Actually purge
 
 set -e
-cd "$(dirname "$0")"
+REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
+REPO_NAME="$(basename "$REPO_ROOT")"
+BACKUP_DIR="$(dirname "$REPO_ROOT")/${REPO_NAME}-backup"
+
+cd "$REPO_ROOT"
 
 # Check for git-filter-repo
 if ! command -v git-filter-repo &> /dev/null; then
@@ -45,24 +49,21 @@ if [ "$1" != "--apply" ]; then
     echo "To actually purge these files, run:"
     echo "  ./purge-unpublished-from-history.sh --apply"
     echo ""
-    echo "BEFORE RUNNING:"
-    echo "  1. Make a backup: cp -r ../quartz ../quartz-backup"
-    echo "  2. Ensure you can force-push to your remote"
+    echo "A backup will be automatically created at:"
+    echo "  $BACKUP_DIR"
     echo ""
     rm "$TEMP_FILE"
     exit 0
 fi
 
-# Confirm
-echo "WARNING: This will permanently rewrite git history!"
+# Create backup automatically
+echo "Creating backup at $BACKUP_DIR ..."
+rm -rf "$BACKUP_DIR"
+cp -r "$REPO_ROOT" "$BACKUP_DIR"
+echo "Backup created."
 echo ""
-read -p "Have you made a backup? (yes/no): " confirm
-if [ "$confirm" != "yes" ]; then
-    echo "Aborting. Please backup first: cp -r ../quartz ../quartz-backup"
-    rm "$TEMP_FILE"
-    exit 1
-fi
 
+echo "WARNING: This will permanently rewrite git history!"
 echo ""
 echo "Starting purge..."
 echo ""
