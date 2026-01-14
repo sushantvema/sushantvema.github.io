@@ -1,55 +1,16 @@
 .DS_Store
-.gitignore
 node_modules
 public
 prof
 tsconfig.tsbuildinfo
 .obsidian
 .quartz-cache
-private/
 .replit
 replit.nix
 
-content/templates/
-artifacts/
-# Don't build my work directory src or html pages
-content/influential/
-public/influential/
-
-
-
-
-# BEGIN AUTO-GENERATED UNPUBLISHED FILES
-# Generated on: Wed Jan 14 10:44:05 PST 2026
-# Files without 'publish: true' in frontmatter
-content/influential/2024-06-11.md
-content/influential/2024-06-13.md
-content/influential/2024-06-14.md
-content/influential/2024-06-17.md
-content/influential/2024-06-18.md
-content/influential/2024-06-20.md
-content/influential/2024-06-21.md
-content/influential/2024-06-24.md
-content/influential/2024-06-25.md
-content/influential/2024-06-27.md
-content/influential/2024-06-28.md
-content/influential/2024-07-01.md
-content/influential/databricks-office-hours-june-14.md
-content/influential/databricks-oh-jun14-external-transcript.md
-content/influential/databricks-sql-ai-functions.md
-content/influential/index.md
-content/influential/schema-meeting-jun14.md
-content/influential/success_criteria_for_summarization.md
-content/influential/TaylorMeeting.md
-content/private/gapi.md
-content/private/japi.md
-content/private/ledger.md
-content/private/personal_finance.md
-content/private/swimming_and_gym_stuff.md
-content/private/test.md
-content/private/yopen.md
-content/templates/note.md
-# END AUTO-GENERATED UNPUBLISHED FILES
-
-# Unpublished content directory
+# Unpublished content directories
+content/private/
 content/unpublished/
+content/templates/
+content/influential/
+artifacts/
