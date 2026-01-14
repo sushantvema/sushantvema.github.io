@@ -17,8 +17,10 @@ content/influential/
 public/influential/
 
 
+
+
 # BEGIN AUTO-GENERATED UNPUBLISHED FILES
-# Generated on: Wed Jan 14 10:40:41 PST 2026
+# Generated on: Wed Jan 14 10:44:05 PST 2026
 # Files without 'publish: true' in frontmatter
 content/influential/2024-06-11.md
 content/influential/2024-06-13.md
@@ -39,7 +41,6 @@ content/influential/index.md
 content/influential/schema-meeting-jun14.md
 content/influential/success_criteria_for_summarization.md
 content/influential/TaylorMeeting.md
-content/notes/test_unpublished_note.md
 content/private/gapi.md
 content/private/japi.md
 content/private/ledger.md
@@ -49,3 +50,6 @@ content/private/test.md
 content/private/yopen.md
 content/templates/note.md
 # END AUTO-GENERATED UNPUBLISHED FILES
+
+# Unpublished content directory
+content/unpublished/
