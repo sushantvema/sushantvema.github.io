@@ -70,10 +70,13 @@ git push origin v4 --force
 - `.git/info/exclude` is local-only → filenames stay private
 
 ### Pre-commit Hook Behavior
-1. Detects staged `.md` files in `content/` without `publish: true`
-2. Auto-unstages them
-3. Runs `update-gitignore.sh --apply`
-4. Allows commit to proceed with remaining files
+1. **Auto-updates `date:` field** for modified markdown files to current ISO timestamp
+2. Detects staged `.md` files in `content/` without `publish: true`
+3. Auto-unstages unpublished files
+4. Runs `update-gitignore.sh --apply`
+5. Allows commit to proceed with remaining files
+
+The hook keeps `date_created:` unchanged while updating `date:` to reflect the last modification time.
 
 ### git filter-repo Gotchas
 - Removes `origin` remote (must re-add after)

@@ -1,6 +1,7 @@
 #!/bin/bash
 # pre-commit hook
-# Auto-unstages and gitignores markdown files without 'publish: true'
+# 1. Updates 'date:' field for modified notes
+# 2. Auto-unstages and gitignores markdown files without 'publish: true'
 #
 # Installation:
 #   cp hooks/pre-commit .git/hooks/pre-commit
@@ -25,6 +26,25 @@ should_publish() {
         return 1  # Should not publish
     fi
 }
+
+# Update date field for modified files
+modified_files=$(git diff --cached --name-only --diff-filter=M | grep '^content/.*\.md$' || true)
+
+if [ -n "$modified_files" ]; then
+    current_timestamp=$(date -u +"%Y-%m-%dT%H:%M:%S")
+
+    while IFS= read -r file; do
+        if [ -f "$file" ]; then
+            # Check if file has frontmatter with date field
+            if grep -q "^date: " "$file"; then
+                # Update date field while preserving format
+                sed -i '' "s/^date: .*/date: $current_timestamp/" "$file"
+                git add "$file"
+                echo "Updated date: $file"
+            fi
+        fi
+    done <<< "$modified_files"
+fi
 
 # Get staged markdown files in content/
 staged_files=$(git diff --cached --name-only --diff-filter=ACM | grep '^content/.*\.md$' || true)
