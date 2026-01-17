@@ -68,12 +68,25 @@ tags:
 | Field | Value | Notes |
 |-------|-------|-------|
 | `title` | User-provided | Required |
-| `description` | User-provided | Optional |
+| `description` | User-provided or enriched | Optional. Can be enhanced with context beyond user's exact words |
 | `author` | "Sushant Vema" | Always set |
 | `date_created` | ISO timestamp | Auto-generated |
 | `date` | ISO timestamp | Auto-generated |
 | `publish` | true/false | Default: false |
 | `tags` | List | Optional |
+
+## Description Guidelines
+
+The description field is flexible and can be enriched by the agent:
+
+- **User provides description**: Use it as-is or enhance with additional context
+- **User doesn't provide description**: Create a concise, informative description based on the topic
+- **Enrichment encouraged**: Add technical context, use cases, or clarifying details that make the note more discoverable
+
+**Example enrichments**:
+- User: "Create a note about PyO3"
+- Basic: "A way to wrap Rust logic into Python modules"
+- Enriched: "Rust-Python interoperability library for creating native Python extensions in Rust, providing performance benefits and type safety"
 
 ## Filename Generation
 
