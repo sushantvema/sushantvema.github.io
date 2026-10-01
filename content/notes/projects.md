@@ -4,7 +4,7 @@ tags:
   - "inbox"
 publish: true
 date_created: 2025-02-24T19:42:14
-date: 2025-05-07T21:58:58
+date: 2026-10-01T20:03:20
 ---
 
 ## Personal Technical Projects
@@ -61,7 +61,10 @@ date: 2025-05-07T21:58:58
 
 ## MacOS QOL
 
-- TODO: toggle off special characters with alt prefix
+- DONE: Find out a good multi-clipboard workflow / clipboard manager. After 2
+  minutes of research, Tahoe's built-in clipboard manager exposed through
+  Spotlight Search (Cmd-Space + Cmd-4) works great.
+- DONE: toggle off special characters with alt prefix
 
 ### Unorganized
 
